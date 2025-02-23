@@ -1,6 +1,7 @@
 
 import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import { Noto_Sans_Georgian } from "next/font/google";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import "./globals.css";
@@ -19,6 +20,11 @@ const geistSans = Geist({
   display: "swap",
   subsets: ["latin"],
 });
+const georgiaSans = Noto_Sans_Georgian({
+  display: "swap",
+  subsets: ["latin"],
+});
+
 
 export default function RootLayout({
   children,
@@ -26,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={geistSans.className} suppressHydrationWarning>
+    <html lang="en" className={georgiaSans.className} suppressHydrationWarning>
       <body className="bg-background text-foreground">
         <ThemeProvider
           attribute="class"
@@ -35,7 +41,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className="min-h-screen">
-            <Header/>
+            {/* <Header/> */}
           {children}
           <Footer/>
           </main>
