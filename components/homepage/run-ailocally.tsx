@@ -76,12 +76,12 @@ const RunAILocally = ({ imageSrc }:any) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.8 }}
         >
-          <button
+          <a
             className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            onClick={() => alert('Learn More Clicked!')}
+            href='/products/ai-local'
           >
             Learn More
-          </button>
+          </a>
         </motion.div>
       </div>
     </motion.div>

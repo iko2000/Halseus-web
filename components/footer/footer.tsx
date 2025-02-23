@@ -77,12 +77,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-gray-300 hover:text-blue-500 transition-all duration-300">
-                  About Us
+                <a href="/integration" className="text-gray-300 hover:text-blue-500 transition-all duration-300">
+                  Integration
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-300 hover:text-blue-500 transition-all duration-300">
+                <a href="/contact" className="text-gray-300 hover:text-blue-500 transition-all duration-300">
                   Contact
                 </a>
               </li>
@@ -100,15 +100,15 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-gray-300">
                 <FaMapMarkerAlt size={18} />
-                <span>123 AI Street, Tech City, World</span>
+                <span>ST George's Park, San-Giljan, Malta</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-300">
                 <FaPhone size={18} />
-                <span>+1 (123) 456-7890</span>
+                <span>+356 995 88 696</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-300">
                 <FaEnvelope size={18} />
-                <span>info@halseus.com</span>
+                <span>info.halseus@gmail.com</span>
               </div>
             </div>
           </motion.div>
@@ -122,7 +122,7 @@ const Footer = () => {
           >
             <h4 className="text-xl font-semibold text-white">Newsletter</h4>
             <p className="text-gray-300">
-              Subscribe to our newsletter for the latest updates and AI insights.
+              Subscribe to our newsletter for the latest updates and Local AI insights.
             </p>
             <form className="flex space-x-2">
               <input
