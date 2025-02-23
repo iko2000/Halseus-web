@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import {FaArrowDown} from "react-icons/fa"
 
 
+
 const HeroSection = () => {
   return (
     <section className="w-[100%] bg-gradient-to-br from-black via-gray-900 to-black bg-cover bg-bottom h-screen sm:h-[100vh] flex justify-center items-center relative overflow-hidden">
@@ -22,7 +23,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
-          HAL <span className="text-red-600">SEUS</span>
+          HAL<span className="text-red-600">SEUS</span>
         </motion.h1>
         <motion.p
           className="text-xl sm:text-2xl text-gray-300 mb-8"

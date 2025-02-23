@@ -7,7 +7,7 @@ import image2 from "../../public/assets/pexels.jpg"
 
 const CustomChatGPT = () => {
   return (
-    <section className="w-full min-h-screen relative flex justify-center items-center overflow-hidden">
+    <section  className="w-full min-h-screen relative flex justify-center p-5 items-center overflow-hidden">
       {/* Background Image (Local) */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -26,14 +26,14 @@ const CustomChatGPT = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-8">
         {/* Minimal Text */}
-        <motion.h2
+        <motion.h6
           className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           Customize ChatGPT
-        </motion.h2>
+        </motion.h6>
         <motion.p
           className="text-lg sm:text-xl text-gray-300 mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -90,12 +90,12 @@ const CustomChatGPT = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.8 }}
         >
-          <button
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            onClick={() => alert('Get Started Clicked!')}
+          <a
+            href='/products/ai-gpt'
+            className="px-8 py-3 bg-black text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
-            Get Started
-          </button>
+            See More
+          </a>
         </motion.div>
       </div>
     </section>

@@ -1,11 +1,16 @@
 'use client'; // Required for animations
 import { motion } from 'framer-motion';
 import Image from 'next/image'; // Assuming you're using Next.js for optimized images
+import useAppStore from '@/app/infrastucture/store/store';
 
 const RunAILocally = ({ imageSrc }:any) => {
+
+  const {state1change} = useAppStore();
+
   return (
-    <motion.div
-      className="w-full p-10 max-w-7xl mx-auto bg-white rounded-3xl overflow-hidden shadow-lg flex flex-col lg:flex-row"
+    <motion.section
+    id='products' 
+      className="w-full p-10 max-w-9xl mx-auto bg-white rounded-3xl overflow-hidden shadow-lg flex flex-col lg:flex-row"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -17,7 +22,7 @@ const RunAILocally = ({ imageSrc }:any) => {
           alt="Ai model picture"
           width={800}
           height={600}
-          className="w-full h-full object-cover"
+          className="w-full rounded-xl h-full object-cover"
         />
       </div>
 
@@ -80,11 +85,11 @@ const RunAILocally = ({ imageSrc }:any) => {
             className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             href='/products/ai-local'
           >
-            Learn More
+            See More
           </a>
         </motion.div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 

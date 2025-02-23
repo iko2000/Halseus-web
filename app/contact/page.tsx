@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
 
 const ContactUs = () => {
+
   return (
-    <section className="w-full bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 sm:px-8 lg:px-16">
+    <section className="w-full mt-10 bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 sm:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.h2
@@ -42,15 +43,8 @@ const ContactUs = () => {
             <div className="space-y-6">
               {/* Address */}
               <div className="flex items-start space-x-4">
-                <div className="text-2xl text-blue-600">
-                  <FaMapMarkerAlt />
-                </div>
-                <div>
-                  <h4 className="text-xl font-semibold text-gray-900">Our Office</h4>
-                  <p className="text-gray-600">
-                    123 AI Street, Tech City, World
-                  </p>
-                </div>
+                
+               
               </div>
 
               {/* Phone */}
@@ -61,7 +55,7 @@ const ContactUs = () => {
                 <div>
                   <h4 className="text-xl font-semibold text-gray-900">Call Us</h4>
                   <p className="text-gray-600">
-                    +1 (123) 456-7890
+                    +356 995 88 696
                   </p>
                 </div>
               </div>
@@ -74,7 +68,7 @@ const ContactUs = () => {
                 <div>
                   <h4 className="text-xl font-semibold text-gray-900">Email Us</h4>
                   <p className="text-gray-600">
-                    info@halseus.com
+                    info.halseus@gmail.com
                   </p>
                 </div>
               </div>

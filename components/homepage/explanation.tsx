@@ -4,21 +4,21 @@ import { FaChartLine, FaDatabase, FaCogs, FaRocket } from 'react-icons/fa';
 
 const WhyCustomAIModels = () => {
   return (
-    <section id='products' className="w-full bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 sm:px-8 lg:px-16">
+    <section className="w-full bg-black py-20 px-4 sm:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <motion.h2
+        <motion.h5
           className="text-4xl sm:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           Why Train AI Models on Custom Data?
-        </motion.h2>
+        </motion.h5>
 
         {/* Description */}
         <motion.p
-          className="text-lg sm:text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto"
+          className="text-lg sm:text-xl text-white text-center mb-16 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
@@ -35,8 +35,8 @@ const WhyCustomAIModels = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-3xl font-bold text-gray-900">Why It's Important</h3>
-            <p className="text-gray-600">
+            <h5 className="text-3xl font-bold text-white">Why It's Important</h5>
+            <p className="text-white">
               Custom data allows AI models to understand your unique business context, leading to better decision-making and improved outcomes. Without custom data, AI models may produce generic results that don't address your specific challenges.
             </p>
             <ul className="space-y-4">
@@ -47,8 +47,8 @@ const WhyCustomAIModels = () => {
                 'Better alignment with business goals.',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-2">
-                  <span className="text-blue-600">✔</span>
-                  <span className="text-gray-600">{item}</span>
+                  <span className="text-white">✔</span>
+                  <span className="text-white">{item}</span>
                 </li>
               ))}
             </ul>
@@ -61,8 +61,8 @@ const WhyCustomAIModels = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-3xl font-bold text-gray-900">How It's Implemented</h3>
-            <p className="text-gray-600">
+            <h5 className="text-3xl font-bold text-white">How It's Implemented</h5>
+            <p className="text-white">
               Implementing custom AI models involves several steps, from data collection and preparation to model training and deployment. Here's how we make it happen:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

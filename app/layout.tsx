@@ -12,7 +12,7 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "HALSEUS",
+  title: "Halseus",
   description: "Halseus - Local AI solutions",
 };
 
@@ -41,7 +41,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className="min-h-screen">
-            {/* <Header/> */}
+            <Header/>
           {children}
           <Footer/>
           </main>

@@ -150,7 +150,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
         >
-          &copy; {new Date().getFullYear()} HALSEUS. All rights reserved.
+          &copy; {2025} HALSEUS. All rights reserved.
         </motion.div>
       </div>
     </footer>

@@ -1,14 +1,29 @@
-'use client'; // Required for animations and interactivity
+'use client';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes, FaArrowRight } from 'react-icons/fa';
+import halseuslogo from "../../public/assets/HALSEUS.png";
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState('Home'); // Track active link
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const handleLinkClick = (name: string) => {
+    setActiveLink(name); // Set active link on click
+  };
+
+  const links = [
+    { name: 'Home', href: '/' },
+    { name: 'Products', href: '#products' },
+    { name: 'Integration', href: '/integration' },
+    { name: 'Contact', href: '/contact' },
+  ];
 
   return (
     <header className="w-full bg-white shadow-sm fixed top-0 z-50">
@@ -21,39 +36,48 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <a href="/" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-              HALSEUS
-            </a>
+            <Link href="/">
+              <Image
+                src={halseuslogo}
+                width={50}
+                height={50}
+                alt="Halseus Logo"
+                className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
+              />
+            </Link>
           </motion.div>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8 items-center">
-            {[
-              { name: 'Home', href: '#home' },
-              { name: 'Products', href: '#products' },
-              { name: 'About', href: '#about' },
-              { name: 'Contact', href: '#contact' },
-            ].map((link, index) => (
-              <motion.a
+            {links.map((link, index) => (
+              <motion.div
                 key={index}
-                href={link.href}
-                className="text-gray-700 hover:text-blue-600 transition-all duration-300"
+                className="relative"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2, duration: 0.8 }}
               >
-                {link.name}
-              </motion.a>
+                <Link
+                  href={link.href}
+                  className={`text-gray-700 hover:text-blue-600 transition-all duration-300 ${
+                    activeLink === link.name ? 'text-lg font-semibold' : 'text-base'
+                  }`}
+                  onClick={() => handleLinkClick(link.name)}
+                >
+                  {link.name}
+                </Link>
+                {activeLink === link.name && (
+                  <motion.div
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
+              </motion.div>
             ))}
             {/* Call to Action Button */}
-            <motion.button
-              className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-            >
-              Get Started
-            </motion.button>
+         
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -76,26 +100,38 @@ const Header = () => {
             transition={{ duration: 0.3 }}
           >
             <nav className="flex flex-col space-y-4">
-              {[
-                { name: 'Home', href: '#home' },
-                { name: 'Products', href: '#products' },
-                { name: 'About', href: '#about' },
-                { name: 'Contact', href: '#contact' },
-              ].map((link, index) => (
-                <a
+              {links.map((link, index) => (
+                <motion.div
                   key={index}
-                  href={link.href}
-                  className="text-gray-700 hover:text-blue-600 px-4 py-2 transition-all duration-300"
+                  className="relative"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.3 }}
                 >
-                  {link.name}
-                </a>
+                  <Link
+                    href={link.href}
+                    className={`text-gray-700 hover:text-blue-600 px-4 py-2 transition-all duration-300 ${
+                      activeLink === link.name ? 'text-lg font-semibold' : 'text-base'
+                    }`}
+                    onClick={() => {
+                      handleLinkClick(link.name);
+                      toggleMenu(); // Close menu on link click
+                    }}
+                  >
+                    {link.name}
+                  </Link>
+                  {activeLink === link.name && (
+                    <motion.div
+                      className="absolute bottom-0 left-4 w-[calc(100%-2rem)] h-0.5 bg-blue-600"
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  )}
+                </motion.div>
               ))}
               {/* Call to Action Button */}
-              <button
-                className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 mx-4"
-              >
-                Get Started
-              </button>
+            
             </nav>
           </motion.div>
         )}
