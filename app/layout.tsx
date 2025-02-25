@@ -16,10 +16,7 @@ export const metadata = {
   description: "Halseus - Local AI solutions",
 };
 
-const geistSans = Geist({
-  display: "swap",
-  subsets: ["latin"],
-});
+
 const georgiaSans = Noto_Sans_Georgian({
   display: "swap",
   subsets: ["latin"],
