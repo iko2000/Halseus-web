@@ -74,7 +74,7 @@ const Header = () => {
           >
             <Link href="/" aria-label="Home">
               <TrueFocus
-                sentence="HAL SEUS"
+                sentence="HALSEUS AI"
                 manualMode={false}
                 blurAmount={5}
                 borderColor="red"
