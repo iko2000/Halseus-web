@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import BlurText from '@/components/reactbits/blurtext';
 const handleAnimationComplete = () => {
   console.log('Animation completed!');
 };
