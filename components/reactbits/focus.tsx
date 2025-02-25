@@ -2,7 +2,17 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./roating.css";
 
-const TrueFocus = ({
+interface TrueFocusProps {
+  sentence?: string;
+  manualMode?: boolean;
+  blurAmount?: number;
+  borderColor?: string;
+  glowColor?: string;
+  animationDuration?: number;
+  pauseBetweenAnimations?: number;
+}
+
+const TrueFocus: React.FC<TrueFocusProps> = ({
   sentence = "True Focus",
   manualMode = false,
   blurAmount = 5,
@@ -12,11 +22,16 @@ const TrueFocus = ({
   pauseBetweenAnimations = 1,
 }) => {
   const words = sentence.split(" ");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [lastActiveIndex, setLastActiveIndex]:any = useState(null);
-  const containerRef:any = useRef(null);
-  const wordRefs:any = useRef([]);
-  const [focusRect, setFocusRect] = useState({ x: 0, y: 0, width: 0, height: 0 });
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [lastActiveIndex, setLastActiveIndex] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const wordRefs = useRef<(HTMLSpanElement | null)[]>([]);
+  const [focusRect, setFocusRect] = useState<{ x: number; y: number; width: number; height: number }>({
+    x: 0,
+    y: 0,
+    width: 0,
+    height: 0,
+  });
 
   useEffect(() => {
     if (!manualMode) {
@@ -30,22 +45,22 @@ const TrueFocus = ({
 
   useEffect(() => {
     if (currentIndex === null || currentIndex === -1) return;
-
     if (!wordRefs.current[currentIndex] || !containerRef.current) return;
 
     const parentRect = containerRef.current.getBoundingClientRect();
-    const activeRect = wordRefs.current[currentIndex].getBoundingClientRect();
+    const activeRect = wordRefs.current[currentIndex]?.getBoundingClientRect();
 
-    setFocusRect({
-      x: activeRect.left - parentRect.left,
-      y: activeRect.top - parentRect.top,
-      width: activeRect.width,
-      height: activeRect.height,
-    });
+    if (activeRect) {
+      setFocusRect({
+        x: activeRect.left - parentRect.left,
+        y: activeRect.top - parentRect.top,
+        width: activeRect.width,
+        height: activeRect.height,
+      });
+    }
   }, [currentIndex, words.length]);
 
-  // Handlers for manual mode (hover)
-  const handleMouseEnter = (index:any) => {
+  const handleMouseEnter = (index: number) => {
     if (manualMode) {
       setLastActiveIndex(index);
       setCurrentIndex(index);
@@ -53,7 +68,7 @@ const TrueFocus = ({
   };
 
   const handleMouseLeave = () => {
-    if (manualMode) {
+    if (manualMode && lastActiveIndex !== null) {
       setCurrentIndex(lastActiveIndex);
     }
   };
@@ -65,22 +80,16 @@ const TrueFocus = ({
         return (
           <span
             key={index}
-            ref={(el) => (wordRefs.current[index] = el)}
-            className={`focus-word ${manualMode ? "manual" : ""} ${isActive && !manualMode ? "active" : ""
-              }`}
+            ref={(el) => {
+              if (el) wordRefs.current[index] = el;
+            }}
+            className={`focus-word ${manualMode ? "manual" : ""} ${isActive && !manualMode ? "active" : ""}`}
             style={{
-              filter:
-                manualMode
-                  ? isActive
-                    ? `blur(0px)`
-                    : `blur(${blurAmount}px)`
-                  : isActive
-                    ? `blur(0px)`
-                    : `blur(${blurAmount}px)`,
+              filter: isActive ? `blur(0px)` : `blur(${blurAmount}px)`,
               "--border-color": borderColor,
               "--glow-color": glowColor,
               transition: `filter ${animationDuration}s ease`,
-            }}
+            } as React.CSSProperties}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
@@ -104,7 +113,7 @@ const TrueFocus = ({
         style={{
           "--border-color": borderColor,
           "--glow-color": glowColor,
-        }}
+        } as React.CSSProperties}
       >
         <span className="corner top-left"></span>
         <span className="corner top-right"></span>
