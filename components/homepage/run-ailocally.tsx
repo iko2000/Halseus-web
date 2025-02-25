@@ -10,11 +10,12 @@ const RunAILocally = ({ imageSrc }:any) => {
   return (
     <motion.section
     id='products' 
-      className="w-full p-10 max-w-9xl mx-auto bg-white rounded-3xl overflow-hidden shadow-lg flex flex-col lg:flex-row"
+      className="w-full p-10 max-w-9xl mx-auto bg-white rounded-3xl h-screen overflow-hidden shadow-lg flex flex-col lg:flex-row"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
+      
       {/* Image Side */}
       <div className="w-full lg:w-1/2 relative">
         <Image
@@ -24,6 +25,7 @@ const RunAILocally = ({ imageSrc }:any) => {
           height={600}
           className="w-full rounded-xl h-full object-cover"
         />
+     
       </div>
 
       {/* Text Side */}

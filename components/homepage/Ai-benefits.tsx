@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { FaShieldAlt, FaRocket, FaPlug, FaCoins, FaCogs, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import halseuslogo from "../../public/assets/HALSEUS.png";
 import { useState } from 'react';
+import LetterGlitch from '../reactbits/glitch';
 
 const AILocalBenefits = () => {
   // Local state for managing expanded/collapsed features
@@ -118,23 +119,20 @@ const AILocalBenefits = () => {
             </motion.div>
 
             {/* Logo Section */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="flex justify-center items-center p-2"
-            >
-              <div className="relative rounded-xl w-124 h-124 rounded-4xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
-                <Image
-                  src={halseuslogo}
-                  alt="Halseus Logo"
-                  width={600}
-                  height={600}
-                  className="w-124 rounded-2xl h-124 object-contain"
-                />
-              </div>
-            </motion.div>
+            <motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className=''  // style={{ width: '600px', height: '400px' }} // Set a larger size for the container
+>
+    <LetterGlitch
+      glitchSpeed={50}
+      centerVignette={true}
+      outerVignette={false}
+      smooth={true}
+    />
+</motion.div>
           </div>
         </div>
       </section>

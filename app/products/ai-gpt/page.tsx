@@ -7,7 +7,7 @@ const CustomizationOfChatGPTArticle = () => {
   const router = useRouter(); // Initialize the router
 
   return (
-    <section className="w-full bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 sm:px-8 lg:px-16">
+    <section className="w-full bg-gradient-to-br from-gray-50 to-gray-100 mt-10 py-20 px-4 sm:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Back Button */}
         <motion.button

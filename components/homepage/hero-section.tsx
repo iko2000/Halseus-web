@@ -37,21 +37,21 @@ const HeroSection = () => {
 
         {/* Animated Text */}
         <motion.div
-          className="text-lg sm:text-xl text-gray-400"
+          className="text-lg sm:text-xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1, ease: 'easeOut' }}
         >
-  <div className="flex items-center space-x-2">
+  <div className="flex border-solid p-2 rounded-2xl items-center justify-center gap-3">
   {/* Static Word */}
-  <span className="text-white mr-5 text-lg sm:text-xl md:text-2xl font-bold">
+  <span className="text-white text-lg sm:text-xl md:text-2xl font-bold">
     Make AI 
   </span>
 
   {/* RotatingText Component */}
   <RotatingText
     texts={['Local', 'Trained', 'Adjusted', 'Safe']}
-    mainClassName="px-16 sm:px-2 md:px-3 bg-blue-500 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+    mainClassName="px-16 sm:px-2 md:px-3 bg-blue-500 text-white overflow-hidden sm:py-1 md:py-2 justify-center rounded-lg"
     staggerFrom={"last"}
     initial={{ y: "100%" }}
     animate={{ y: 0 }}
