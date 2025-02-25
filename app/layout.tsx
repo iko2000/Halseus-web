@@ -10,11 +10,37 @@ const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000";
 
-export const metadata = {
-  metadataBase: new URL(defaultUrl),
-  title: "Halseus",
-  description: "Halseus - Local AI solutions",
-};
+  export const metadata = {
+    metadataBase: new URL(defaultUrl),
+    title: "Halseus | Local AI Solutions",
+    description: "Halseus offers cutting-edge local AI solutions for businesses and individuals.",
+    keywords: ["AI", "Machine Learning", "Local AI", "AI Solutions", "Halseus"],
+    openGraph: {
+      title: "Halseus | Local AI Solutions",
+      description: "Halseus offers cutting-edge local AI solutions for businesses and individuals.",
+      url: defaultUrl,
+      siteName: "Halseus",
+      images: [
+        {
+          url: `${defaultUrl}/public/assets/HALSEUS.png`, // Replace with an actual image in public/assets
+          width: 1200,
+          height: 630,
+          alt: "Halseus - AI Solutions",
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Halseus | Local AI Solutions",
+      description: "Halseus offers cutting-edge local AI solutions for businesses and individuals.",
+      images: [`${defaultUrl}/public/assets/HALSEUS.png`], // Replace with actual image
+    },
+    alternates: {
+      canonical: defaultUrl,
+    },
+  };
 
 
 const georgiaSans = Noto_Sans_Georgian({
