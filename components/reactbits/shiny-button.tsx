@@ -4,12 +4,12 @@ const ShinyText = ({ text, disabled = false, speed = 5, className = '' }:any) =>
   const animationDuration = `${speed}s`;
 
   return (
-    <button
+    <span
       className={`shiny-text ${disabled ? 'disabled' : ''} ${className}`}
       style={{ animationDuration }}
     >
       {text}
-    </button>
+    </span>
   );
 };
 
