@@ -2,7 +2,6 @@
 import React from 'react'
 import Image from 'next/image'
 import BlurText from '@/components/reactbits/blurtext';
-import LetterGlitch from '@/components/reactbits/letter-glitch';
 const handleAnimationComplete = () => {
   console.log('Animation completed!');
 };
@@ -26,12 +25,7 @@ export default function InfrastructurePage() {
         {/* LetterGlitch Container */}
         <div className="w-full max-w-4xl h-96 flex justify-center items-center"> 
           {/* Adjusted container size */}
-          <LetterGlitch
-            glitchSpeed={50}
-            centerVignette={true}
-            outerVignette={false}
-            smooth={true}
-          />
+         
         </div>
       </div>
     </>
