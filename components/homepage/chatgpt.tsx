@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaMagic, FaCode, FaRocket } from 'react-icons/fa';
 import Image from 'next/image'; // Import Next.js Image component for optimized local images
 import Particles from '../reactbits/background';
+import Link from 'next/link';
 
 const CustomChatGPT = () => {
   return (
@@ -29,22 +30,22 @@ const CustomChatGPT = () => {
     {/* Content */}
     <div className="relative z-10 text-center px-4 sm:px-8">
       {/* Minimal Text */}
-      <motion.h6
+      <motion.h2
         className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
        We Customize ChatGPT for you
-      </motion.h6>
-      <motion.p
+      </motion.h2>
+      <motion.span
         className="text-lg sm:text-xl text-gray-300 mb-8"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
         Straight in your browser.
-      </motion.p>
+      </motion.span>
   
       {/* Features */}
       <motion.div
@@ -93,12 +94,12 @@ const CustomChatGPT = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.8 }}
       >
-        <a
+        <Link
           href='/products/ai-gpt'
           className="px-8 py-3 bg-black text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
         >
-          See More
-        </a>
+          Explore CustomGPT
+        </Link>
       </motion.div>
     </div>
   </section>

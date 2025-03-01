@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image'; // Assuming you're using Next.js for optimized images
 import useAppStore from '@/app/infrastucture/store/store';
+import Link from 'next/link';
 
 const RunAILocally = ({ imageSrc }:any) => {
 
@@ -30,14 +31,14 @@ const RunAILocally = ({ imageSrc }:any) => {
       {/* Text Side */}
       <div className="w-full lg:w-1/2 p-8 sm:p-12 lg:p-16">
         {/* Title */}
-        <motion.h2
+        <motion.h3
           className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
           Run AI Locally
-        </motion.h2>
+        </motion.h3>
 
         {/* Description */}
         <motion.p
@@ -82,12 +83,12 @@ const RunAILocally = ({ imageSrc }:any) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.8 }}
         >
-          <a
+          <Link
             className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             href='/products/ai-local'
           >
-            See More
-          </a>
+            Explore LOCAL AI
+          </Link>
         </motion.div>
       </div>
     </motion.section>

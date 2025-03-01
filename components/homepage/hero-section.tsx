@@ -26,14 +26,14 @@ const HeroSection = () => {
         >
           HAL<span className="text-red-600">SEUS</span>
         </motion.h1>
-        <motion.p
+        <motion.span
           className="text-xl sm:text-2xl text-gray-300 mb-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
         >
           Local AI Solutions
-        </motion.p>
+        </motion.span>
 
         {/* Animated Text */}
         <motion.div

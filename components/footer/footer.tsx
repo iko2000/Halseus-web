@@ -15,9 +15,9 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+            <h6 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
               HALSEUS
-            </h3>
+            </h6>
             <p className="text-gray-300">
               Empowering businesses with cutting-edge AI solutions tailored to your needs.
             </p>
@@ -64,7 +64,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <h4 className="text-xl font-semibold text-white">Quick Links</h4>
+            <h6 className="text-xl font-semibold text-white">Quick Links</h6>
             <ul className="space-y-2">
               <li>
                 <a href="#home" className="text-gray-300 hover:text-blue-500 transition-all duration-300">
@@ -96,7 +96,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <h4 className="text-xl font-semibold text-white">Contact Us</h4>
+            <h6 className="text-xl font-semibold text-white">Contact Us</h6>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-gray-300">
                 <FaMapMarkerAlt size={18} />
@@ -120,7 +120,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <h4 className="text-xl font-semibold text-white">Newsletter</h4>
+            <h6 className="text-xl font-semibold text-white">Newsletter</h6>
             <p className="text-gray-300">
               Subscribe to our newsletter for the latest updates and Local AI insights.
             </p>

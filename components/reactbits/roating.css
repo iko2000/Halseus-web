@@ -35,38 +35,6 @@
     white-space: pre;
   }
 
-  .falling-text-container {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    text-align: center;
-    padding-top: 2em;
-  }
-  
-  .falling-text-target {
-    display: inline-block;
-  }
-  
-  .word {
-    display: inline-block;
-    margin: 0 2px;
-    user-select: none;
-  }
-  
-  .highlighted {
-    color: cyan;
-    font-weight: bold;
-  }
-  
-  .falling-text-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
-  
 
   .shiny-text {
     color: #b5b5b5a4; /* Adjust this color to change intensity/style */
@@ -124,7 +92,7 @@
   /* Words */
   .focus-word {
     position: relative;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 900;
     cursor: pointer;
     transition:

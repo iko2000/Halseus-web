@@ -2,20 +2,21 @@
 import { motion } from 'framer-motion';
 import { FaChartLine, FaDatabase, FaCogs, FaRocket } from 'react-icons/fa';
 import Image from 'next/image'; // Assuming you're using Next.js for optimized images
+import Link from 'next/link';
 
 const TrainAIModels = ({ imageSrc }:any) => {
   return (
     <section className= "w-full bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 sm:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <motion.h4
+        <motion.h6
           className="text-4xl sm:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
          We Train AI Models on Custom Data
-        </motion.h4>
+        </motion.h6>
 
         {/* Split Layout: Features and Image */}
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -86,12 +87,12 @@ const TrainAIModels = ({ imageSrc }:any) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          <a
+          <Link
             className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             href='/products/ai-training'
           >
-            See More
-          </a>
+            Explore AI training
+          </Link>
         </motion.div>
       </div>
     </section>

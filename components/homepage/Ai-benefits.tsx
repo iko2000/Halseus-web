@@ -69,9 +69,9 @@ const AILocalBenefits = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-4xl font-bold text-white mb-6">
+              <h4 className="text-4xl font-bold text-white mb-6">
                 Why Local AI Matters
-              </h3>
+              </h4>
               <p className="text-lg text-white mb-8">
                 Empower your business with AI that operates directly within your environment. 
                 Our local-first approach combines enterprise-grade security with unmatched performance.
