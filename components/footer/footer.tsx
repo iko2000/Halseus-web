@@ -23,25 +23,25 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
+                aria-label='Link to Facebook page'
                 href="https://www.facebook.com/profile.php?id=61572910935352"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-500 transition-all duration-300"
               >
-                <FaFacebook size={24} />
+                <FaFacebook size={24} className='text-white hover:text-blue-900' />
               </a>
               
             </div>
           </motion.div>
 
           {/* Quick Links */}
-          <motion.div
+          <motion.nav
             className="space-y-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <h6 className="text-xl font-semibold text-white">Quick Links</h6>
+            <span className="text-xl font-semibold text-white">Quick Links</span>
             <ul className="space-y-2">
               <li>
                 <a href="#home" className="text-gray-300 hover:text-blue-500 transition-all duration-300">
@@ -64,7 +64,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </motion.div>
+          </motion.nav>
 
           {/* Contact Info */}
           <motion.div
