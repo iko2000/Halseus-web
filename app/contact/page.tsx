@@ -10,13 +10,13 @@ export const metadata = {
   openGraph: {
     title: 'Contact Us - Halseus AI | Get in Touch for AI Solutions',
     description: 'Contact Halseus AI today to learn more about our AI customization, training, and local AI solutions. Let’s build the future of AI together.',
-    images: '../public/assets/HALSEUS.png',
+    images: 'https://halseus.com/assets/contact.png',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Contact Us - Halseus AI | Get in Touch for AI Solutions',
     description: 'Contact Halseus AI today to learn more about our AI customization, training, and local AI solutions. Let’s build the future of AI together.',
-    images: '../public/assets/HALSEUS.png',
+    images: 'https://halseus.com/assets/contact.png',
   },
 };
 

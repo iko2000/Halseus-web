@@ -8,13 +8,13 @@ export const metadata = {
   openGraph: {
     title: 'Local AI Solutions - Halseus AI | On-Device AI for Privacy and Performance',
     description: 'Discover Halseus AI’s local AI solutions. Keep your data on-device for enhanced privacy and performance with our cutting-edge AI technology.',
-    images: '/images/og-ai-local.jpg',
+    images: 'https://halseus.com/assets/products.png',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Local AI Solutions - Halseus AI | On-Device AI for Privacy and Performance',
     description: 'Discover Halseus AI’s local AI solutions. Keep your data on-device for enhanced privacy and performance with our cutting-edge AI technology.',
-    images: '/images/og-ai-local.jpg',
+    images: 'https://halseus.com/assets/products.png',
   },
 };
 

@@ -9,13 +9,13 @@ export const metadata = {
   openGraph: {
     title: 'Customize GPT - Halseus AI | Tailored AI Solutions for Your Business',
     description: 'Customize GPT models to fit your business needs with Halseus AI. Create AI solutions that align perfectly with your workflows and goals.',
-    images: '/images/og-customize-gpt.jpg',
+    images: 'https://halseus.com/assets/products.png',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Customize GPT - Halseus AI | Tailored AI Solutions for Your Business',
     description: 'Customize GPT models to fit your business needs with Halseus AI. Create AI solutions that align perfectly with your workflows and goals.',
-    images: '/images/og-customize-gpt.jpg',
+    images: 'https://halseus.com/assets/products.png',
   },
 };
 

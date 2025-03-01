@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       siteName: 'Halseus',
       images: [
         {
-          url: '../public/assets/HALSEUS.png',
+          url: 'https://halseus.com/assets/products.png',
           width: 1200,
           height: 630,
           alt: 'Halseus AI Products',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       card: 'summary_large_image',
       title: 'Halseus AI Products & Solutions',
       description: 'Explore our custom AI solutions designed for business implementation.',
-      images: ['../public/assets/HALSEUS.png'],
+      images: ['https://halseus.com/assets/products.png'],
     },
     robots: {
       index: true,

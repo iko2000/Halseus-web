@@ -22,7 +22,7 @@ const defaultUrl = process.env.VERCEL_URL
       siteName: "Halseus",
       images: [
         {
-          url: `${defaultUrl}/public/assets/HALSEUS.png`, // Replace with an actual image in public/assets
+          url: `${defaultUrl}/assets/open-graph.png`, 
           width: 1200,
           height: 630,
           alt: "Halseus - AI Solutions",
@@ -35,7 +35,7 @@ const defaultUrl = process.env.VERCEL_URL
       card: "summary_large_image",
       title: "Halseus | Local AI Solutions",
       description: "Halseus offers cutting-edge local AI solutions for businesses and individuals.",
-      images: [`${defaultUrl}/public/assets/HALSEUS.png`], // Replace with actual image
+      images: [`${defaultUrl}/assets/open-graph.png`], // Replace with actual image
     },
     alternates: {
       canonical: defaultUrl,
