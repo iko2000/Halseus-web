@@ -2,11 +2,6 @@
 User-agent: *
 Allow: /
 
-# *
-User-agent: *
-Disallow: /protected
-Disallow: /api/private
-
 # Host
 Host: https://halseus.com
 
