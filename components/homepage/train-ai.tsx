@@ -69,12 +69,12 @@ const TrainAIModels = ({ imageSrc }:any) => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative h-96 w-full rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative h-96 w-full rounded-2xl overflow-hidden">
               <Image
                 src={imageSrc} // Pass the image source as a prop
                 alt="Train AI Models"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
           </motion.div>
