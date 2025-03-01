@@ -14,12 +14,11 @@ export default async function Home() {
     <>
       <main className="">
        <HeroSection/>
+       <CustomChatGPT />
        <RunAILocally imageSrc={aipicture}/>
        <AILocalBenefits/>
-       <TrainAIModels imageSrc={trainaipic}/>
        <WhyCustomAIModels/>
-       <CustomChatGPT />
-
+       <TrainAIModels imageSrc={trainaipic}/>
       </main>
     </>
   );

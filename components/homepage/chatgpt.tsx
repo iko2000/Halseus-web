@@ -6,7 +6,9 @@ import Particles from '../reactbits/background';
 
 const CustomChatGPT = () => {
   return (
-    <section className="w-full min-h-screen bg-blue relative flex justify-center p-5 items-center overflow-hidden">
+    <section 
+    id='products' 
+    className="w-full min-h-screen bg-blue relative flex justify-center p-5 items-center overflow-hidden">
     {/* Particles Background */}
     <div className="absolute inset-0 z-0">
       <Particles
@@ -33,7 +35,7 @@ const CustomChatGPT = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Customize ChatGPT
+       We Customize ChatGPT for you
       </motion.h6>
       <motion.p
         className="text-lg sm:text-xl text-gray-300 mb-8"
@@ -41,7 +43,7 @@ const CustomChatGPT = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        Straight in your browser. No coding required.
+        Straight in your browser.
       </motion.p>
   
       {/* Features */}
@@ -55,17 +57,17 @@ const CustomChatGPT = () => {
           {
             icon: <FaMagic size={40} className="text-blue-500" />,
             title: 'Easy Customization',
-            description: 'Tailor ChatGPT to your needs with a simple interface.',
+            description: 'We Tailor ChatGPT to your needs with a simple interface.',
           },
           {
             icon: <FaCode size={40} className="text-purple-500" />,
             title: 'No Coding Required',
-            description: 'Build and deploy models without writing a single line of code.',
+            description: 'We Build and deploy models without writing a single line of code.',
           },
           {
             icon: <FaRocket size={40} className="text-orange-500" />,
             title: 'Instant Deployment',
-            description: 'Deploy your custom model in seconds.',
+            description: 'We Deploy your custom model in seconds.',
           },
         ].map((feature, index) => (
           <motion.div

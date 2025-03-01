@@ -14,7 +14,7 @@ const TrainAIModels = ({ imageSrc }:any) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Train AI Models on Custom Data
+         We Train AI Models on Custom Data
         </motion.h4>
 
         {/* Split Layout: Features and Image */}

@@ -9,7 +9,6 @@ const RunAILocally = ({ imageSrc }:any) => {
 
   return (
     <motion.section
-    id='products' 
       className="w-full p-10 max-w-9xl mx-auto bg-white rounded-3xl overflow-hidden shadow-lg flex flex-col lg:flex-row"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}

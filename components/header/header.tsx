@@ -3,18 +3,20 @@ import { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; // Add this import
 import TrueFocus from '../reactbits/focus';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('Home');
+  const pathname = usePathname(); // Get the current route
+  const [activeLink, setActiveLink] = useState(pathname); // Initialize with the current route
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
   }, []);
 
-  const handleLinkClick = useCallback((name: string) => {
-    setActiveLink(name);
+  const handleLinkClick = useCallback((href: string) => {
+    setActiveLink(href);
     setIsMenuOpen(false); // Close mobile menu on link click
   }, []);
 
@@ -24,6 +26,11 @@ const Header = () => {
     { name: 'Integration', href: '/integration' },
     { name: 'Contact', href: '/contact' },
   ];
+
+  // Update activeLink when the route changes
+  useEffect(() => {
+    setActiveLink(pathname);
+  }, [pathname]);
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -41,24 +48,6 @@ const Header = () => {
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  // Smooth scrolling for anchor links
-  useEffect(() => {
-    const handleAnchorClick = (event: MouseEvent) => {
-      const target = (event.target as HTMLElement).closest('a[href^="#"]');
-      if (target) {
-        event.preventDefault();
-        const targetId = target.getAttribute('href')?.substring(1);
-        const targetElement = document.getElementById(targetId!);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    };
-
-    document.addEventListener('click', handleAnchorClick);
-    return () => document.removeEventListener('click', handleAnchorClick);
   }, []);
 
   return (
@@ -97,14 +86,14 @@ const Header = () => {
                 <Link
                   href={link.href}
                   className={`text-gray-700 hover:text-blue-600 transition-all duration-300 ${
-                    activeLink === link.name ? 'text-lg font-semibold' : 'text-base'
+                    activeLink === link.href ? 'text-lg font-semibold' : 'text-base'
                   }`}
-                  onClick={() => handleLinkClick(link.name)}
+                  onClick={() => handleLinkClick(link.href)}
                   aria-label={link.name}
                 >
                   {link.name}
                 </Link>
-                {activeLink === link.name && (
+                {activeLink === link.href && (
                   <motion.div
                     className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600"
                     initial={{ scaleX: 0 }}
@@ -164,14 +153,14 @@ const Header = () => {
                       <Link
                         href={link.href}
                         className={`text-gray-700 hover:text-blue-600 text-2xl transition-all duration-300 ${
-                          activeLink === link.name ? 'font-semibold' : 'font-normal'
+                          activeLink === link.href ? 'font-semibold' : 'font-normal'
                         }`}
-                        onClick={() => handleLinkClick(link.name)}
+                        onClick={() => handleLinkClick(link.href)}
                         aria-label={link.name}
                       >
                         {link.name}
                       </Link>
-                      {activeLink === link.name && (
+                      {activeLink === link.href && (
                         <motion.div
                           className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600"
                           initial={{ scaleX: 0 }}
