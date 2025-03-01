@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /protected
+Disallow: /api/private
+
+# Host
+Host: https://halseus.com
+
+# Sitemaps
+Sitemap: https://halseus.com/sitemap.xml
