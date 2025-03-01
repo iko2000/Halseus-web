@@ -1,8 +1,8 @@
 
-import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Noto_Sans_Georgian } from "next/font/google";
 import Header from "@/components/header/header";
+import { Analytics } from "@vercel/analytics/react"
 import Footer from "@/components/footer/footer";
 import "./globals.css";
 
@@ -56,6 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={georgiaSans.className} suppressHydrationWarning>
+      <Analytics/>
       <body className="bg-background text-foreground">
         <ThemeProvider
           attribute="class"
