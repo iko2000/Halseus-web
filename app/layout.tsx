@@ -14,7 +14,7 @@ const defaultUrl = process.env.VERCEL_URL
     metadataBase: new URL(defaultUrl),
     title: "Halseus | Local AI Solutions",
     description: "Halseus offers cutting-edge local AI solutions for businesses and individuals.",
-    keywords: ["AI data", "AI custom", "Local AI", "AI Solutions", "Halseus"],
+    keywords: ["AI improve", "AI custom", "Local AI", "AI Solutions", "Halseus"],
     openGraph: {
       title: "Halseus | Local AI Solutions",
       description: "Halseus offers cutting-edge local AI solutions for businesses and individuals.",
@@ -64,11 +64,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+             <Header/>
+
           <main className="min-h-screen">
-            <Header/>
           {children}
-          <Footer/>
           </main>
+          <Footer/>
+
         </ThemeProvider>
       </body>
     </html>
