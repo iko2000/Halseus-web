@@ -367,7 +367,7 @@ export default function Integrationpagecontent({
               </div>
               <h3 className="text-xl font-bold mb-2">API Documentation</h3>
               <p className="text-gray-300 mb-4">Explore our comprehensive documentation for integrating with our AI systems.</p>
-              <a href="https://halseus.com/assets/Halseuswhitepaper.pdf" className="inline-flex items-center bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded transition-colors">
+              <a href="https://halseus.com/assets/api-doc-halseus.pdf" className="inline-flex items-center bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded transition-colors">
                 View Docs <FaArrowRight className="ml-2" />
               </a>
             </div>
@@ -380,7 +380,7 @@ export default function Integrationpagecontent({
               </div>
               <h3 className="text-xl font-bold mb-2">Model Catalog</h3>
               <p className="text-gray-300 mb-4">Browse our selection of customizable AI models for various business applications.</p>
-              <a href="https://halseus.com/assets/Halseuswhitepaper.pdf" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded transition-colors">
+              <a href="https://halseus.com/assets/catalog.pdf" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded transition-colors">
                 Explore Models <FaArrowRight className="ml-2" />
               </a>
             </div>
