@@ -246,23 +246,7 @@ export default function Integrationpagecontent({
       <div ref={stepsRef} className="max-w-6xl mx-auto flex flex-col items-center px-4 mb-20">
         <h2 className="text-2xl font-bold mb-8 text-center">Our Implementation Process</h2>
         
-        {/* Mobile step details view */}
-        {showDetails && (
-          <div className="lg:hidden mb-8">
-            <PixelCard variant={integrationSteps[activeStep].variant}>
-              <div className="p-6 absolute">
-                <h3 className="text-xl font-bold mb-3">{integrationSteps[activeStep].title}</h3>
-                <p className="text-gray-300 mb-4">{integrationSteps[activeStep].details}</p>
-                <button 
-                  onClick={() => setShowDetails(false)}
-                  className="text-white bg-black bg-opacity-30 px-4 py-2 rounded hover:bg-opacity-40 transition-all"
-                >
-                  Back to Steps
-                </button>
-              </div>
-            </PixelCard>
-          </div>
-        )}
+      
         
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${showDetails ? 'hidden lg:grid' : ''}`}>
           {integrationSteps.map((step, index) => (
@@ -284,12 +268,7 @@ export default function Integrationpagecontent({
                   {/* Step number indicator */}
                   <div className="mt-5 flex justify-between items-center">
                     <span className="text-sm font-mono opacity-60">Step {index + 1}/{integrationSteps.length}</span>
-                    <button 
-                      onClick={() => setShowDetails(true)}
-                      className="lg:hidden text-sm text-blue-400 hover:text-blue-300 flex items-center gap-1"
-                    >
-                      Details <FaArrowRight className="text-xs" />
-                    </button>
+                  
                     <div className="w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30">
                       {index + 1}
                     </div>
