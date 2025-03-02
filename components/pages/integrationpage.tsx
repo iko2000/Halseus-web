@@ -243,7 +243,7 @@ export default function Integrationpagecontent({
       </div>
       
       {/* Main Content with PixelCards */}
-      <div ref={stepsRef} className="max-w-6xl mx-auto px-4 mb-20">
+      <div ref={stepsRef} className="max-w-6xl mx-auto flex flex-col items-center px-4 mb-20">
         <h2 className="text-2xl font-bold mb-8 text-center">Our Implementation Process</h2>
         
         {/* Mobile step details view */}
@@ -313,8 +313,8 @@ export default function Integrationpagecontent({
         <div className="max-w-4xl mx-auto px-4 ">
           <h2 className="text-2xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
           
-          <div className="space-y-4 bg-gray-900 py-16  mb-20 grid grid-cols-1 md:grid-cols-2">
-            {faqItems.map((item, index) => (
+          <div className="bg-gray-900 py-16 mb-20 flex flex-col items-center space-y-4 sm:grid sm:grid-cols-2 sm:gap-6">
+          {faqItems.map((item, index) => (
               <PixelCard key={index} variant="default">
                 <div className="p-5 absolute w-full">
                   <button 
@@ -346,8 +346,8 @@ export default function Integrationpagecontent({
       <div className="max-w-6xl mx-auto px-4 mb-20">
         <h2 className="text-2xl font-bold mb-10 text-center">Resources</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <PixelCard variant="blue">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4 sm:p-6">
+        <PixelCard variant="blue">
             <div className="p-6 absolute">
               <div className="mb-4 text-3xl text-blue-400">
                 <FaFileAlt />

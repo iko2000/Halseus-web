@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowDown, FaRocket, FaShieldAlt, FaLock } from "react-icons/fa";
 import RotatingText from '../reactbits/roating.-text';
+import transparentlogo from "../../public/assets/logotransparent.png";
+import Image from 'next/image';
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -22,7 +24,7 @@ const HeroSection = () => {
   }, []);
   
   return (
-    <section className="w-full bg-gradient-to-br from-black via-gray-900 to-black h-screen flex justify-center items-center relative overflow-hidden">
+    <section className="w-full bg-gradient-to-br from-black via-gray-900 to-black h-screen mt-20 flex justify-center items-center relative overflow-hidden">
       {/* Dynamic Background Gradient */}
       <div 
         className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-red-600/10"
@@ -79,20 +81,10 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
         >
-          {[
-            { icon: <FaRocket />, label: "Fast" },
-            { icon: <FaShieldAlt />, label: "Secure" },
-            { icon: <FaLock />, label: "Private" }
-          ].map((item, index) => (
-            <motion.div 
-              key={index}
-              className="flex flex-col items-center text-gray-300 hover:text-white transition-colors"
-              whileHover={{ scale: 1.1 }}
-            >
-              <div className="text-2xl mb-2">{item.icon}</div>
-              <div className="text-sm">{item.label}</div>
-            </motion.div>
-          ))}
+         <Image  
+        width={200}
+        height={200}
+        src={transparentlogo} alt='Halseus Transparent logo image'/>
         </motion.div>
         
         {/* Animated Text */}
