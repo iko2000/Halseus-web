@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import './roating.css';
 
 class Pixel {
@@ -181,9 +181,13 @@ export default function PixelCard({
   const pixelsRef = useRef<Pixel[]>([]);
   const animationRef = useRef<number | null>(null);
   const timePreviousRef = useRef<number>(performance.now());
-  const reducedMotion = useRef<boolean>(
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  ).current;
+  const [reducedMotion, setReducedMotion] = useState(false);
+  
+  useEffect(() => {
+    // This code only runs on the client after component mounts
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setReducedMotion(prefersReducedMotion);
+  }, []);
 
   const variantCfg = VARIANTS[variant] || VARIANTS.default;
   const finalGap = gap ?? variantCfg.gap;
