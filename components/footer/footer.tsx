@@ -44,12 +44,12 @@ const Footer = () => {
             <span className="text-xl font-semibold text-white">Quick Links</span>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-gray-300 hover:text-blue-500 transition-all duration-300">
+                <a href="/" className="text-gray-300 hover:text-blue-500 transition-all duration-300">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#products" className="text-gray-300 hover:text-blue-500 transition-all duration-300">
+                <a href="/products" className="text-gray-300 hover:text-blue-500 transition-all duration-300">
                   Products
                 </a>
               </li>
@@ -104,7 +104,7 @@ const Footer = () => {
             <form className="flex space-x-2">
               <input
                 type="email"
-                placeholder="Your email"
+                placeholder="info@halseus.com"
                 className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button

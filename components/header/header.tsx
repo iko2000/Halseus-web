@@ -68,7 +68,7 @@ const Header = () => {
                 blurAmount={5}
                 borderColor="red"
                 animationDuration={2}
-                pauseBetweenAnimations={1}
+                pauseBetweenAnimations={5}
               />
             </Link>
           </motion.div>

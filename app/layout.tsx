@@ -14,6 +14,9 @@ const defaultUrl = process.env.VERCEL_URL
     metadataBase: new URL(defaultUrl),
     title: "Halseus | Local AI Solutions",
     description: "Halseus offers cutting-edge local AI solutions for businesses and individuals.",
+    icons: {
+      icon: '/favicon.ico',
+    },
     keywords: ["AI improve", "AI custom", "Local AI", "AI Solutions", "Halseus"],
     openGraph: {
       title: "Halseus | Local AI Solutions",
