@@ -48,7 +48,7 @@ const HeroSection = () => {
         >
           <div className="inline-block relative">
             <motion.h1
-              className="text-6xl sm:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 tracking-tighter"
+              className="text-6xl sm:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 tracking-tighter"
               animate={{ backgroundPosition: ['0% 50%', '100% 50%'] }}
               transition={{ duration: 15, ease: 'linear', repeat: Infinity, repeatType: 'reverse' }}
             >
