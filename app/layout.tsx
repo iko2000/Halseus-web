@@ -4,6 +4,7 @@ import { Noto_Sans_Georgian } from "next/font/google";
 import Header from "@/components/header/header";
 import { Analytics } from "@vercel/analytics/react"
 import Footer from "@/components/footer/footer";
+import Head from "next/head";  // Import Head component
 import "./globals.css";
 
 const defaultUrl = "https://www.halseus.com/"
@@ -62,6 +63,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Head>
+            {/* Add canonical link */}
+            <link rel="canonical" href={defaultUrl} />
+          </Head>
              <Header/>
 
           <main className="min-h-screen">
