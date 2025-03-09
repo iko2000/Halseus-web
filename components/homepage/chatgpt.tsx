@@ -5,11 +5,13 @@ import Image from 'next/image'; // Import Next.js Image component for optimized 
 import Particles from '../reactbits/background';
 import Link from 'next/link';
 
+
 const CustomChatGPT = () => {
   return (
     <section 
     id='products' 
     className="w-full min-h-screen bg-blue relative flex justify-center p-5 items-center overflow-hidden">
+
     {/* Particles Background */}
     <div className="absolute inset-0 z-0">
       <Particles
