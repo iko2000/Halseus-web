@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import FlowingMenu from '@/components/reactbits/collections';
 import { motion } from 'framer-motion';
+import Productivitycomponent from "@/components/tailwind-UI/prodactivity";
 
 const ProductsPageContent = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -41,6 +42,7 @@ const ProductsPageContent = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
+      <Productivitycomponent/>
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <motion.div 
           className="text-center mb-16"

@@ -1,7 +1,5 @@
 import ProductsPagecontent from "@/components/pages/productspage-content";
 import { Metadata } from "next";
-import imagetodisp from "../public/assets/HALSEUS.png"
-
 
 export const metadata: Metadata = {
     title: 'Halseus | Custom AI Solutions & Products',
