@@ -37,10 +37,7 @@ const defaultUrl = "https://www.halseus.com/"
       title: "Halseus | Local AI Solutions",
       description: "Halseus offers cutting-edge local AI solutions for businesses and individuals.",
       images: [`${defaultUrl}/assets/open-graph.png`], // Replace with actual image
-    },
-    alternates: {
-      canonical: defaultUrl,
-    },
+    }
   };
 
 
