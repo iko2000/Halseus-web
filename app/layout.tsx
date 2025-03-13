@@ -63,9 +63,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Head>
-            <link rel="canonical" href={defaultUrl} />
-          </Head>
+         
              <Header/>
 
           <main className="min-h-screen">
