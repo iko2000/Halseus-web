@@ -64,7 +64,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Head>
-            {/* Add canonical link */}
             <link rel="canonical" href={defaultUrl} />
           </Head>
              <Header/>
