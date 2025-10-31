@@ -1,43 +1,333 @@
 {
-  "Index": {
-    "boilerplateName": "Plantilla i18n de Next.js",
-    "title": "Plantilla Next 15 con i18n y Shadcn UI",
-    "description": "Un potente punto de partida para tu próxima aplicación web multilingüe y accesible.",
-    "cloneRepository": "Clonar repositorio",
-    "leaveStar": "Dejar una estrella",
-    "howToUse": "Cómo usar",
-    "gettingStarted": "Empezar",
-    "installation": "Instalación",
-    "howToContribute": "Cómo contribuir",
-    "omitrtlUsage": "Omitir uso de RTL",
-    "OmitRTLInstruction": "Para usar OmitRTL, simplemente envuelve el componente para el que deseas omitir la compatibilidad con RTL con el componente OmitRTL.",
-    "contribute": "Contribuir",
-    "installationSteps": {
-      "cloneRepository": "Clonar el repositorio:",
-      "installDependencies": "Instalar dependencias:",
-      "startDevServer": "Iniciar el servidor de desarrollo:"
+  "Header": {
+    "logo": "Tech Solutions",
+    "nav": {
+      "home": "Inicio",
+      "localAI": "IA Local",
+      "services": "Servicios",
+      "contact": "Contacto"
     },
-    "contributeSteps": {
-      "fork": "Bifurcar el repositorio",
-      "createBranch": "Crear una rama nueva:",
-      "commit": "Confirmar tus cambios:",
-      "push": "Subir a la rama:",
-      "pullRequest": "Crear una nueva solicitud de extracción"
+    "theme": {
+      "light": "Claro",
+      "dark": "Oscuro"
+    }
+  },
+  "Hero": {
+    "title": "Tech",
+    "subtitle": "Desde computación en la nube hasta modelos de IA... lo cubrimos todo",
+    "cta": {
+      "getStarted": "Comenzar"
+    }
+  },
+  "Services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones tecnológicas integrales para impulsar tu negocio. Desde infraestructura hasta insights, te tenemos cubierto.",
+    "list": {
+      "hosting": {
+        "title": "Alojamiento en la Nube",
+        "description": "Soluciones de hosting en la nube de nivel empresarial con garantía de tiempo de actividad del 99,9 %. Infraestructura escalable que crece con tu negocio.",
+        "features": {
+          "1": "Autoescalado",
+          "2": "Balanceo de Carga",
+          "3": "Integración CDN"
+        }
+      },
+      "dataProcessing": {
+        "title": "Procesamiento de Datos",
+        "description": "Procesamiento y transformación de datos en tiempo real. Maneja millones de eventos por segundo con facilidad.",
+        "features": {
+          "1": "Analítica en Tiempo Real",
+          "2": "Canales ETL",
+          "3": "Almacén de Datos"
+        }
+      },
+      "insights": {
+        "title": "Insights de Negocio",
+        "description": "Convierte tus datos en insights accionables. Analítica avanzada y visualización para impulsar la toma de decisiones.",
+        "features": {
+          "1": "Paneles Personalizados",
+          "2": "Analítica Predictiva",
+          "3": "Seguimiento de KPIs"
+        }
+      },
+      "deployment": {
+        "title": "Servicios de Despliegue",
+        "description": "Automatización de despliegues con canalizaciones CI/CD. Del staging a producción en minutos.",
+        "features": {
+          "1": "Automatización CI/CD",
+          "2": "Cero Tiempo de Inactividad",
+          "3": "Soporte de Rollback"
+        }
+      },
+      "development": {
+        "title": "Desarrollo a Medida",
+        "description": "Servicios de desarrollo full-stack a tu medida. Marcos modernos y mejores prácticas garantizadas.",
+        "features": {
+          "1": "Aplicaciones Web",
+          "2": "APIs",
+          "3": "Aplicaciones Móviles"
+        }
+      },
+      "ai": {
+        "title": "IA y Aprendizaje Automático",
+        "description": "Aprovecha la IA para automatizar procesos y ganar ventaja competitiva. Modelos de ML personalizados entrenados con tus datos.",
+        "features": {
+          "1": "Entrenamiento de Modelos",
+          "2": "Soluciones de PLN",
+          "3": "Visión por Computadora"
+        }
+      },
+      "security": {
+        "title": "Seguridad y Cumplimiento",
+        "description": "Soluciones de seguridad empresarial con certificaciones de cumplimiento. Protege tus datos e infraestructura.",
+        "features": {
+          "1": "Pruebas de Penetración",
+          "2": "Cumplimiento GDPR",
+          "3": "Monitoreo 24/7"
+        }
+      },
+      "devops": {
+        "title": "Soluciones DevOps",
+        "description": "Optimiza tu flujo de desarrollo con prácticas modernas de DevOps e infraestructura como código.",
+        "features": {
+          "1": "Kubernetes",
+          "2": "Docker",
+          "3": "Terraform"
+        }
+      },
+      "performance": {
+        "title": "Optimización de Rendimiento",
+        "description": "Maximiza el rendimiento de la aplicación y la experiencia del usuario. Reduce tiempos de carga y costos de servidor.",
+        "features": {
+          "1": "Optimización de Código",
+          "2": "Estrategia de Caché",
+          "3": "Ajuste de Base de Datos"
+        }
+      },
+      "api": {
+        "title": "Desarrollo de APIs",
+        "description": "APIs REST y GraphQL listas para escalar. Documentación completa y soporte de versionado.",
+        "features": {
+          "1": "APIs REST",
+          "2": "GraphQL",
+          "3": "Puerta de Enlace de API"
+        }
+      },
+      "microservices": {
+        "title": "Arquitectura de Microservicios",
+        "description": "Diseña e implementa microservicios escalables. Despliegue independiente y aislamiento de fallos.",
+        "features": {
+          "1": "Service Mesh",
+          "2": "Orientado a Eventos",
+          "3": "Puerta de Enlace de API"
+        }
+      },
+      "edge": {
+        "title": "Computación en el Borde",
+        "description": "Despliega aplicaciones más cerca de tus usuarios. Reduce la latencia y mejora el rendimiento global.",
+        "features": {
+          "1": "CDN Global",
+          "2": "Funciones en el Borde",
+          "3": "Baja Latencia"
+        }
+      }
     },
-    "error": {
-      "server": "Error interno del servidor",
-      "sorry": "Lo sentimos, encontramos un problema inesperado en nuestro servidor.",
-      "tryAgain": "Inténtalo de nuevo más tarde.",
-      "returnHome": "Volver a la página principal"
+    "learnMore": "Saber más",
+    "cta": {
+      "text": "¿Listo para transformar tu negocio con tecnología de vanguardia?",
+      "button": "Comienza Hoy"
+    }
+  },
+  "RunAILocally": {
+    "title": "Ejecuta IA Localmente",
+    "description": "Garantiza la seguridad y privacidad de los datos ejecutando modelos de IA localmente, sin exponer información sensible a servidores de terceros.",
+    "securityText": "seguridad de los datos",
+    "privacyText": "privacidad",
+    "features": {
+      "performance": {
+        "title": "Alto Rendimiento",
+        "description": "Optimizado para hardware local."
+      },
+      "protection": {
+        "title": "Protección de Datos",
+        "description": "Ningún dato sale de tus instalaciones."
+      },
+      "deployment": {
+        "title": "Despliegue Rápido",
+        "description": "Integración perfecta con tus sistemas."
+      },
+      "offline": {
+        "title": "Capacidad sin Conexión",
+        "description": "Opera sin acceso a Internet."
+      }
+    }
+  },
+  "LocalAI": {
+    "title": "Entrenamos Modelos de IA con Datos Personalizados",
+    "features": {
+      "analysis": {
+        "title": "Análisis de Datos",
+        "description": "Analizamos tus datos para identificar patrones e insights que mejoren el entrenamiento del modelo."
+      },
+      "preparation": {
+        "title": "Preparación de Datos",
+        "description": "Limpia, preprocesa y prepara tus datos para un rendimiento óptimo del modelo de IA."
+      },
+      "training": {
+        "title": "Entrenamiento de Modelos",
+        "description": "Entrenamos modelos de IA con algoritmos de vanguardia adaptados a tus datos."
+      },
+      "deployment": {
+        "title": "Despliegue",
+        "description": "Despliega tus modelos entrenados sin fricciones en entornos de producción."
+      }
+    },
+    "cta": "Explorar el entrenamiento de IA"
+  },
+  "Contact": {
+    "badge": "Ponte en Contacto",
+    "title": "Trabajemos Juntos",
+    "subtitle": "¿Tienes un proyecto en mente? Nos encantará saber de ti. Envíanos un mensaje y responderemos lo antes posible.",
+    "info": {
+      "email": {
+        "title": "Escríbenos",
+        "content": "info@halseus.com",
+        "subContent": "Responderemos en 24 horas"
+      },
+      "phone": {
+        "title": "Llámanos",
+        "content": "+49 (0) 421 149567",
+        "subContent": "Lun–Vie, 9:00–18:00 EST"
+      },
+      "address": {
+        "title": "Visítanos",
+        "content": "Bremen, Alemania",
+        "subContent": "034th Street 22, 28201"
+      },
+      "hours": {
+        "title": "Horario",
+        "content": "Lunes - Viernes",
+        "subContent": "9:00 - 18:00 EST"
+      }
+    },
+    "form": {
+      "name": {
+        "label": "Tu Nombre",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "Tu Email",
+        "placeholder": "john@example.com"
+      },
+      "subject": {
+        "label": "Asunto",
+        "placeholder": "¿Cómo podemos ayudarte?"
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Cuéntanos sobre tu proyecto..."
+      },
+      "submit": "Enviar Mensaje",
+      "success": {
+        "title": "¡Mensaje Enviado!",
+        "message": "Gracias por contactarnos. Te responderemos en breve."
+      }
+    },
+    "footer": {
+      "text": "¿Prefieres email? Escríbenos directamente a",
+      "email": "contact@techsolutions.com"
     }
   },
   "Footer": {
-    "copyright": "© 2025 Plantilla i18n de Next.js. Código abierto bajo licencia MIT.",
-    "githubLink": "GitHub"
+    "company": {
+      "name": "Halseus",
+      "description": "Impulsamos negocios con soluciones tecnológicas de vanguardia. Desde infraestructura en la nube hasta innovaciones en IA."
+    },
+    "newsletter": {
+      "title": "Suscríbete a nuestro boletín",
+      "placeholder": "Introduce tu email"
+    },
+    "contact": {
+      "address": "Bremen, Alemania",
+      "phone": "+49 (0) 421 149567",
+      "email": "info@halseus.com"
+    },
+    "links": {
+      "services": {
+        "title": "Servicios",
+        "items": {
+          "1": "Alojamiento en la Nube",
+          "2": "IA y Aprendizaje Automático",
+          "3": "Desarrollo a Medida",
+          "4": "Soluciones DevOps"
+        }
+      },
+      "company": {
+        "title": "Empresa",
+        "items": {
+          "1": "Inicio",
+          "2": "IA Local",
+          "3": "Servicios",
+          "4": "Contacto"
+        }
+      },
+      "resources": {
+        "title": "Recursos",
+        "items": {
+          "1": "Documentación",
+          "2": "Referencia de API",
+          "3": "Soporte",
+          "4": "Blog"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "items": {
+          "1": "Política de Privacidad",
+          "2": "Términos de Servicio",
+          "3": "Política de Cookies",
+          "4": "RGPD"
+        }
+      }
+    },
+    "copyright": "Todos los derechos reservados.",
+    "language": "Español (ES)"
+  },
+  "Index": {
+    "boilerplateName": "Plantilla de Next.js i18n",
+    "title": "Plantilla Next 15 con i18n y Shadcn UI",
+    "description": "Un potente punto de partida para tu próxima aplicación web multilingüe y accesible.",
+    "cloneRepository": "Clonar repositorio",
+    "leaveStar": "Deja una estrella",
+    "howToUse": "Cómo usar",
+    "gettingStarted": "Primeros pasos",
+    "installation": "Instalación",
+    "howToContribute": "Cómo contribuir",
+    "omitrtlUsage": "Uso de OmitRTL",
+    "OmitRTLInstruction": "Para usar OmitRTL, simplemente envuelve el componente al que quieras omitir el soporte RTL con el componente OmitRTL.",
+    "contribute": "Contribuir",
+    "installationSteps": {
+      "cloneRepository": "Clona el repositorio:",
+      "installDependencies": "Instala las dependencias:",
+      "startDevServer": "Inicia el servidor de desarrollo:"
+    },
+    "contributeSteps": {
+      "fork": "Haz un fork del repositorio",
+      "createBranch": "Crea una nueva rama:",
+      "commit": "Confirma tus cambios:",
+      "push": "Haz push a la rama:",
+      "pullRequest": "Crea un Pull Request"
+    },
+    "error": {
+      "server": "Error Interno del Servidor",
+      "sorry": "Lo sentimos, encontramos un problema inesperado en nuestro servidor.",
+      "tryAgain": " Inténtalo de nuevo más tarde.",
+      "returnHome": "Volver al inicio"
+    }
   },
   "Metadata": {
-    "title": "Plantilla i18n de Next.js - Plantilla de inicio multilingüe",
-    "description": "Kit de inicio para internacionalización (i18n) de Next.js con soporte para árabe, chino, inglés, español y japonés. Incluye shadcn UI, cambio de tema y soporte para RTL.",
-    "keywords": "Next.js, i18n, internacionalización, árabe, chino, inglés, español, japonés, multilingüe, plantilla, plantilla de inicio, shadcn UI, soporte RTL"
+    "title": "Tech Solutions - Servicios Tecnológicos Multilingües",
+    "description": "Soluciones tecnológicas profesionales que incluyen alojamiento en la nube, IA/ML, desarrollo a medida y DevOps. Disponible en inglés, español y japonés.",
+    "keywords": "alojamiento en la nube, IA, aprendizaje automático, desarrollo a medida, DevOps, soluciones tecnológicas, multilingüe"
   }
 }

@@ -1,4 +1,298 @@
 {
+  "Header": {
+    "logo": "Halseus",
+    "nav": {
+      "home": "Home",
+      "localAI": "Local AI",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "theme": {
+      "light": "Light",
+      "dark": "Dark"
+    }
+  },
+  "Hero": {
+    "title": "Tech",
+    "subtitle": "From Cloud computers to AI models... we cover everything",
+    "cta": {
+      "getStarted": "Get Started"
+    }
+  },
+  "Services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive technology solutions to power your business forward. From infrastructure to insights, we've got you covered.",
+    "list": {
+      "hosting": {
+        "title": "Cloud Hosting",
+        "description": "Enterprise-grade cloud hosting solutions with 99.9% uptime guarantee. Scalable infrastructure that grows with your business.",
+        "features": {
+          "1": "Auto-scaling",
+          "2": "Load Balancing",
+          "3": "CDN Integration"
+        }
+      },
+      "dataProcessing": {
+        "title": "Data Processing",
+        "description": "Real-time data processing and transformation pipelines. Handle millions of events per second with ease.",
+        "features": {
+          "1": "Real-time Analytics",
+          "2": "ETL Pipelines",
+          "3": "Data Warehousing"
+        }
+      },
+      "insights": {
+        "title": "Business Insights",
+        "description": "Transform your data into actionable insights. Advanced analytics and visualization tools to drive decision-making.",
+        "features": {
+          "1": "Custom Dashboards",
+          "2": "Predictive Analytics",
+          "3": "KPI Tracking"
+        }
+      },
+      "deployment": {
+        "title": "Deployment Services",
+        "description": "Seamless deployment automation with CI/CD pipelines. From staging to production in minutes.",
+        "features": {
+          "1": "CI/CD Automation",
+          "2": "Zero Downtime",
+          "3": "Rollback Support"
+        }
+      },
+      "development": {
+        "title": "Custom Development",
+        "description": "Full-stack development services tailored to your needs. Modern frameworks and best practices guaranteed.",
+        "features": {
+          "1": "Web Apps",
+          "2": "APIs",
+          "3": "Mobile Apps"
+        }
+      },
+      "ai": {
+        "title": "AI & Machine Learning",
+        "description": "Leverage AI to automate processes and gain competitive advantage. Custom ML models trained on your data.",
+        "features": {
+          "1": "Model Training",
+          "2": "NLP Solutions",
+          "3": "Computer Vision"
+        }
+      },
+      "security": {
+        "title": "Security & Compliance",
+        "description": "Enterprise security solutions with compliance certifications. Protect your data and infrastructure.",
+        "features": {
+          "1": "Penetration Testing",
+          "2": "GDPR Compliance",
+          "3": "24/7 Monitoring"
+        }
+      },
+      "devops": {
+        "title": "DevOps Solutions",
+        "description": "Streamline your development workflow with modern DevOps practices and infrastructure as code.",
+        "features": {
+          "1": "Kubernetes",
+          "2": "Docker",
+          "3": "Terraform"
+        }
+      },
+      "performance": {
+        "title": "Performance Optimization",
+        "description": "Maximize application performance and user experience. Reduce load times and server costs.",
+        "features": {
+          "1": "Code Optimization",
+          "2": "Caching Strategy",
+          "3": "Database Tuning"
+        }
+      },
+      "api": {
+        "title": "API Development",
+        "description": "RESTful and GraphQL APIs built for scale. Comprehensive documentation and versioning support.",
+        "features": {
+          "1": "REST APIs",
+          "2": "GraphQL",
+          "3": "API Gateway"
+        }
+      },
+      "microservices": {
+        "title": "Microservices Architecture",
+        "description": "Design and implement scalable microservices. Independent deployment and fault isolation.",
+        "features": {
+          "1": "Service Mesh",
+          "2": "Event-Driven",
+          "3": "API Gateway"
+        }
+      },
+      "edge": {
+        "title": "Edge Computing",
+        "description": "Deploy applications closer to your users. Reduce latency and improve performance globally.",
+        "features": {
+          "1": "Global CDN",
+          "2": "Edge Functions",
+          "3": "Low Latency"
+        }
+      }
+    },
+    "learnMore": "Learn more",
+    "cta": {
+      "text": "Ready to transform your business with cutting-edge technology?",
+      "button": "Get Started Today"
+    }
+  },
+  "RunAILocally": {
+    "title": "Run AI Locally",
+    "description": "Ensure data security and privacy by running AI models locally, without exposing sensitive information to third-party servers.",
+    "securityText": "data security",
+    "privacyText": "privacy",
+    "features": {
+      "performance": {
+        "title": "High Performance",
+        "description": "Optimized for local hardware."
+      },
+      "protection": {
+        "title": "Data Protection",
+        "description": "No data leaves your premises."
+      },
+      "deployment": {
+        "title": "Fast Deployment",
+        "description": "Seamless integration with your systems."
+      },
+      "offline": {
+        "title": "Offline Capability",
+        "description": "Operate without internet access."
+      }
+    }
+  },
+  "LocalAI": {
+    "title": "We Train AI Models on Custom Data",
+    "features": {
+      "analysis": {
+        "title": "Data Analysis",
+        "description": "Analyze your data to identify patterns and insights for better model training."
+      },
+      "preparation": {
+        "title": "Data Preparation",
+        "description": "Clean, preprocess, and prepare your data for optimal AI model performance."
+      },
+      "training": {
+        "title": "Model Training",
+        "description": "Train AI models using state-of-the-art algorithms tailored to your data."
+      },
+      "deployment": {
+        "title": "Deployment",
+        "description": "Deploy your trained models seamlessly into production environments."
+      }
+    },
+    "cta": "Explore AI training"
+  },
+  "Contact": {
+    "badge": "Get In Touch",
+    "title": "Let's Work Together",
+    "subtitle": "Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "info": {
+      "email": {
+        "title": "Email Us",
+        "content": "info@halseus.com",
+        "subContent": "We'll respond within 24 hours"
+      },
+      "phone": {
+        "title": "Call Us",
+        "content": "+49 (0) 421 149567",
+        "subContent": "Mon-Fri, 9AM-6PM EST"
+      },
+      "address": {
+        "title": "Visit Us",
+        "content": "Bremen, GER",
+        "subContent": "034th Street 22, 28201"
+      },
+      "hours": {
+        "title": "Working Hours",
+        "content": "Monday - Friday",
+        "subContent": "9:00 AM - 6:00 PM EST"
+      }
+    },
+    "form": {
+      "name": {
+        "label": "Your Name",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "Your Email",
+        "placeholder": "john@example.com"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "How can we help you?"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your project..."
+      },
+      "submit": "Send Message",
+      "success": {
+        "title": "Message Sent!",
+        "message": "Thank you for reaching out. We'll get back to you shortly."
+      }
+    },
+    "footer": {
+      "text": "Prefer email? Reach us directly at",
+      "email": "contact@techsolutions.com"
+    }
+  },
+  "Footer": {
+    "company": {
+      "name": "Halseus",
+      "description": "Empowering businesses with cutting-edge technology solutions. From cloud infrastructure to AI innovations."
+    },
+    "newsletter": {
+      "title": "Subscribe to our newsletter",
+      "placeholder": "Enter your email"
+    },
+    "contact": {
+      "address": "Bremen, GER",
+      "phone": "+49 (0) 421 149567",
+      "email": "info@halseus.com"
+    },
+    "links": {
+      "services": {
+        "title": "Services",
+        "items": {
+          "1": "Cloud Hosting",
+          "2": "AI & Machine Learning",
+          "3": "Custom Development",
+          "4": "DevOps Solutions"
+        }
+      },
+      "company": {
+        "title": "Company",
+        "items": {
+          "1": "Home",
+          "2": "Local AI",
+          "3": "Services",
+          "4": "Contact"
+        }
+      },
+      "resources": {
+        "title": "Resources",
+        "items": {
+          "1": "Documentation",
+          "2": "API Reference",
+          "3": "Support",
+          "4": "Blog"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "items": {
+          "1": "Privacy Policy",
+          "2": "Terms of Service",
+          "3": "Cookie Policy",
+          "4": "GDPR"
+        }
+      }
+    },
+    "copyright": "All rights reserved.",
+    "language": "English (US)"
+  },
   "Index": {
     "boilerplateName": "Next.js i18n Template",
     "title": "Next 15 Template with i18n and Shadcn UI",
@@ -31,14 +325,9 @@
       "returnHome": "Return home"
     }
   },
-
-  "Footer": {
-    "copyright": "© 2025 Next.js i18n Template. Open source under MIT license.",
-    "githubLink": "GitHub"
-  },
   "Metadata": {
-    "title": "Next.js i18n Template - Multilingual Starter Template",
-    "description": "Next.js internationalization (i18n) starter kit with Arabic, Chinese, English, Spanish, and Japanese support. Includes shadcn UI, theme switching, and RTL support.",
-    "keywords": "Next.js, i18n, internationalization, Arabic, Chinese, Spanish, Japanese, multilingual, template, starter template, shadcn UI, RTL support"
+    "title": "Halseus - Professional Technology Solutions | Cloud, AI & DevOps",
+    "description": "Transform your business with Halseus - expert technology solutions including cloud hosting, AI/ML development, custom software, DevOps, and 24/7 support. Available in multiple languages.",
+    "keywords": "cloud hosting, AI solutions, machine learning, custom development, DevOps, technology consulting, software development, data processing, microservices, edge computing, API development, cybersecurity, Bremen Germany, Halseus"
   }
 }

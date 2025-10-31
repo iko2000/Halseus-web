@@ -9,6 +9,8 @@ import { WebSite } from "schema-dts";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Header } from "@/components/parents/header";
+import { Footer } from "@/components/parents/footer";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -22,7 +24,8 @@ const geistMono = Geist_Mono({
 });
 
 // Extract domain to a constant to avoid repetition
-const DOMAIN = "https://next-app-i18n-starter.vercel.app";
+const DOMAIN = "https://halseus.com"; // Update this to your actual domain
+const SITE_NAME = "Halseus";
 
 export default async function RootLayout({
   children,
@@ -45,14 +48,27 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={isArabic ? "rtl" : "ltr"} suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#000000" />
+        {/* Favicons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/assets/images/halseus.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/assets/images/halseus.png" />
+
+        {/* Theme Colors */}
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+
+        {/* Preconnect for Performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+
+        {/* Manifest for PWA */}
+        <link rel="manifest" href="/manifest.json" />
+
+        {/* Structured Data - Organization & Website */}
         <script
           {...jsonLdScriptProps<WebSite>({
             "@context": "https://schema.org",
@@ -74,7 +90,11 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <NextIntlClientProvider>
+            <Header />
+            {children}
+            <Footer />
+            </NextIntlClientProvider>
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
@@ -83,7 +103,7 @@ export default async function RootLayout({
   );
 }
 
-const locales = ["en", "ar", "zh", "es", "ja"] as const;
+const locales = ["en", "es", "ja"] as const;
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -97,24 +117,50 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
+  // Generate locale-specific URLs
+  const currentUrl = `${DOMAIN}/${locale}`;
+  const ogImage = `${DOMAIN}/assets/images/open-graph.png`;
+
   return {
-    title: t("title"),
+    metadataBase: new URL(DOMAIN),
+    title: {
+      default: t("title"),
+      template: `%s | ${SITE_NAME}`,
+    },
     description: t("description"),
     keywords: t("keywords"),
+    authors: [{ name: SITE_NAME }],
+    creator: SITE_NAME,
+    publisher: SITE_NAME,
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
     other: {
       "google-site-verification": "sVYBYfSJfXdBca3QoqsZtD6lsWVH6sk02RCH4YAbcm8",
+    },
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/assets/images/halseus.png", type: "image/png" },
+      ],
+      apple: [
+        { url: "/assets/images/halseus.png" },
+      ],
     },
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: DOMAIN,
-      siteName: "Next.js i18n Template",
+      url: currentUrl,
+      siteName: SITE_NAME,
       images: [
         {
-          url: `${DOMAIN}/og-image.png`,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: t("title"),
+          type: "image/png",
         },
       ],
       locale: locale,
@@ -124,29 +170,36 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: [`${DOMAIN}/og-image.png`],
-      creator: "@s0ver5",
+      images: [ogImage],
+      creator: "@halseus", // Update to your actual Twitter handle
+      site: "@halseus", // Update to your actual Twitter handle
     },
     alternates: {
-      canonical: DOMAIN,
+      canonical: currentUrl,
       languages: {
         en: `${DOMAIN}/en`,
-        ar: `${DOMAIN}/ar`,
-        zh: `${DOMAIN}/zh`,
         es: `${DOMAIN}/es`,
         ja: `${DOMAIN}/ja`,
+        "x-default": `${DOMAIN}/en`,
       },
     },
     robots: {
       index: true,
       follow: true,
+      nocache: false,
       googleBot: {
         index: true,
         follow: true,
+        noimageindex: false,
         "max-video-preview": -1,
         "max-image-preview": "large",
         "max-snippet": -1,
       },
+    },
+    verification: {
+      google: "sVYBYfSJfXdBca3QoqsZtD6lsWVH6sk02RCH4YAbcm8",
+      // yandex: "your-yandex-verification-code",
+      // bing: "your-bing-verification-code",
     },
   };
 }

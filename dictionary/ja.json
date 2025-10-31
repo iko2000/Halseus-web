@@ -1,43 +1,333 @@
 {
+  "Header": {
+    "logo": "Tech Solutions",
+    "nav": {
+      "home": "ホーム",
+      "localAI": "ローカルAI",
+      "services": "サービス",
+      "contact": "お問い合わせ"
+    },
+    "theme": {
+      "light": "ライト",
+      "dark": "ダーク"
+    }
+  },
+  "Hero": {
+    "title": "Tech",
+    "subtitle": "クラウドからAIモデルまで――あらゆる領域をカバーします",
+    "cta": {
+      "getStarted": "今すぐ開始"
+    }
+  },
+  "Services": {
+    "title": "提供サービス",
+    "subtitle": "ビジネスを前進させる包括的なテクノロジーソリューション。インフラからインサイトまで、私たちにお任せください。",
+    "list": {
+      "hosting": {
+        "title": "クラウドホスティング",
+        "description": "稼働率99.9%保証のエンタープライズ向けクラウドホスティング。ビジネスの成長に合わせてスケール可能。",
+        "features": {
+          "1": "オートスケーリング",
+          "2": "ロードバランシング",
+          "3": "CDN連携"
+        }
+      },
+      "dataProcessing": {
+        "title": "データ処理",
+        "description": "リアルタイムのデータ処理・変換パイプライン。毎秒数百万イベントを容易に処理。",
+        "features": {
+          "1": "リアルタイム分析",
+          "2": "ETLパイプライン",
+          "3": "データウェアハウス"
+        }
+      },
+      "insights": {
+        "title": "ビジネスインサイト",
+        "description": "データを実行可能なインサイトへ。意思決定を支える高度な分析と可視化ツール。",
+        "features": {
+          "1": "カスタムダッシュボード",
+          "2": "予測分析",
+          "3": "KPIトラッキング"
+        }
+      },
+      "deployment": {
+        "title": "デプロイメントサービス",
+        "description": "CI/CDパイプラインによるシームレスな自動化。数分でステージングから本番へ。",
+        "features": {
+          "1": "CI/CD自動化",
+          "2": "ゼロダウンタイム",
+          "3": "ロールバック対応"
+        }
+      },
+      "development": {
+        "title": "カスタム開発",
+        "description": "ニーズに合わせたフルスタック開発。最新フレームワークとベストプラクティスを保証。",
+        "features": {
+          "1": "Webアプリ",
+          "2": "API",
+          "3": "モバイルアプリ"
+        }
+      },
+      "ai": {
+        "title": "AI／機械学習",
+        "description": "AIでプロセスを自動化し競争優位性を獲得。あなたのデータで学習したカスタムMLモデル。",
+        "features": {
+          "1": "モデル学習",
+          "2": "NLPソリューション",
+          "3": "コンピュータビジョン"
+        }
+      },
+      "security": {
+        "title": "セキュリティとコンプライアンス",
+        "description": "各種認証に対応したエンタープライズセキュリティ。データとインフラを保護。",
+        "features": {
+          "1": "ペネトレーションテスト",
+          "2": "GDPR準拠",
+          "3": "24時間365日監視"
+        }
+      },
+      "devops": {
+        "title": "DevOpsソリューション",
+        "description": "最新のDevOps実践とIaCで開発フローを最適化。",
+        "features": {
+          "1": "Kubernetes",
+          "2": "Docker",
+          "3": "Terraform"
+        }
+      },
+      "performance": {
+        "title": "パフォーマンス最適化",
+        "description": "アプリの性能とUXを最大化。ロード時間とサーバーコストを削減。",
+        "features": {
+          "1": "コード最適化",
+          "2": "キャッシュ戦略",
+          "3": "データベースチューニング"
+        }
+      },
+      "api": {
+        "title": "API開発",
+        "description": "スケール可能なREST/GraphQL API。充実したドキュメントとバージョニングを提供。",
+        "features": {
+          "1": "REST API",
+          "2": "GraphQL",
+          "3": "APIゲートウェイ"
+        }
+      },
+      "microservices": {
+        "title": "マイクロサービスアーキテクチャ",
+        "description": "スケーラブルなマイクロサービスを設計・実装。独立デプロイと障害分離。",
+        "features": {
+          "1": "サービスメッシュ",
+          "2": "イベント駆動",
+          "3": "APIゲートウェイ"
+        }
+      },
+      "edge": {
+        "title": "エッジコンピューティング",
+        "description": "ユーザーの近くでアプリを実行。レイテンシを削減し世界規模で性能を向上。",
+        "features": {
+          "1": "グローバルCDN",
+          "2": "エッジ関数",
+          "3": "低レイテンシ"
+        }
+      }
+    },
+    "learnMore": "さらに詳しく",
+    "cta": {
+      "text": "最先端テクノロジーでビジネスを変革しませんか？",
+      "button": "今すぐはじめる"
+    }
+  },
+  "RunAILocally": {
+    "title": "AIをローカルで実行",
+    "description": "機密情報を第三者サーバーに渡さず、ローカルでAIモデルを実行してデータの安全性とプライバシーを確保します。",
+    "securityText": "データセキュリティ",
+    "privacyText": "プライバシー",
+    "features": {
+      "performance": {
+        "title": "高性能",
+        "description": "ローカルハードウェア向けに最適化。"
+      },
+      "protection": {
+        "title": "データ保護",
+        "description": "データは施設外へ出ません。"
+      },
+      "deployment": {
+        "title": "迅速な導入",
+        "description": "既存システムとシームレスに統合。"
+      },
+      "offline": {
+        "title": "オフライン機能",
+        "description": "インターネット接続なしで稼働。"
+      }
+    }
+  },
+  "LocalAI": {
+    "title": "カスタムデータでAIモデルを学習します",
+    "features": {
+      "analysis": {
+        "title": "データ分析",
+        "description": "より良いモデル学習のために、パターンとインサイトを抽出します。"
+      },
+      "preparation": {
+        "title": "データ前処理",
+        "description": "最適なモデル性能のためにデータを洗浄・前処理します。"
+      },
+      "training": {
+        "title": "モデル学習",
+        "description": "最先端アルゴリズムを用いて、あなたのデータに合わせて学習します。"
+      },
+      "deployment": {
+        "title": "デプロイ",
+        "description": "学習済みモデルを本番環境へシームレスに展開します。"
+      }
+    },
+    "cta": "AI学習を詳しく見る"
+  },
+  "Contact": {
+    "badge": "お問い合わせ",
+    "title": "一緒に取り組みましょう",
+    "subtitle": "プロジェクトのご相談はお気軽に。メッセージをお送りいただければ、できるだけ早くご連絡します。",
+    "info": {
+      "email": {
+        "title": "メールで連絡",
+        "content": "info@halseus.com",
+        "subContent": "24時間以内にご返信します"
+      },
+      "phone": {
+        "title": "お電話",
+        "content": "+49 (0) 421 149567",
+        "subContent": "月〜金、9:00〜18:00（EST）"
+      },
+      "address": {
+        "title": "ご来訪",
+        "content": "ブレーメン（ドイツ）",
+        "subContent": "034th Street 22, 28201"
+      },
+      "hours": {
+        "title": "営業時間",
+        "content": "月曜〜金曜",
+        "subContent": "9:00〜18:00（EST）"
+      }
+    },
+    "form": {
+      "name": {
+        "label": "お名前",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "メールアドレス",
+        "placeholder": "john@example.com"
+      },
+      "subject": {
+        "label": "件名",
+        "placeholder": "どのようにお手伝いできますか？"
+      },
+      "message": {
+        "label": "メッセージ",
+        "placeholder": "プロジェクトの内容をご記入ください..."
+      },
+      "submit": "送信",
+      "success": {
+        "title": "送信されました！",
+        "message": "ご連絡ありがとうございます。追ってご返信いたします。"
+      }
+    },
+    "footer": {
+      "text": "メールの方がよろしければ、こちらへどうぞ：",
+      "email": "contact@techsolutions.com"
+    }
+  },
+  "Footer": {
+    "company": {
+      "name": "Halseus",
+      "description": "最先端のテクノロジーで企業を後押し。クラウドインフラからAIイノベーションまで。"
+    },
+    "newsletter": {
+      "title": "ニュースレターを購読",
+      "placeholder": "メールアドレスを入力"
+    },
+    "contact": {
+      "address": "ブレーメン（ドイツ）",
+      "phone": "+49 (0) 421 149567",
+      "email": "info@halseus.com"
+    },
+    "links": {
+      "services": {
+        "title": "サービス",
+        "items": {
+          "1": "クラウドホスティング",
+          "2": "AI／機械学習",
+          "3": "カスタム開発",
+          "4": "DevOpsソリューション"
+        }
+      },
+      "company": {
+        "title": "会社情報",
+        "items": {
+          "1": "ホーム",
+          "2": "ローカルAI",
+          "3": "サービス",
+          "4": "お問い合わせ"
+        }
+      },
+      "resources": {
+        "title": "リソース",
+        "items": {
+          "1": "ドキュメント",
+          "2": "APIリファレンス",
+          "3": "サポート",
+          "4": "ブログ"
+        }
+      },
+      "legal": {
+        "title": "法務",
+        "items": {
+          "1": "プライバシーポリシー",
+          "2": "利用規約",
+          "3": "クッキーポリシー",
+          "4": "GDPR"
+        }
+      }
+    },
+    "copyright": "無断複製を禁じます。",
+    "language": "日本語"
+  },
   "Index": {
     "boilerplateName": "Next.js i18n テンプレート",
-    "title": "i18nとShadcn UIを備えたNext 15 テンプレート",
-    "description": "次世代の多言語対応でアクセシブルなウェブアプリケーションのための強力な出発点。",
+    "title": "Next 15 テンプレート（i18n・Shadcn UI対応）",
+    "description": "多言語・アクセシブルな次世代Webアプリのための強力なスターターテンプレートです。",
     "cloneRepository": "リポジトリをクローン",
     "leaveStar": "スターを付ける",
     "howToUse": "使い方",
     "gettingStarted": "はじめに",
     "installation": "インストール",
     "howToContribute": "貢献方法",
-    "omitrtlUsage": "OmitRTLの使用",
-    "OmitRTLInstruction": "OmitRTLを使用するには、RTLサポートを省略したいコンポーネントをOmitRTLコンポーネントでラップするだけです。",
-    "contribute": "貢献",
+    "omitrtlUsage": "OmitRTL の使い方",
+    "OmitRTLInstruction": "OmitRTL を使用するには、RTL対応を除外したいコンポーネントを OmitRTL コンポーネントでラップしてください。",
+    "contribute": "貢献する",
     "installationSteps": {
-      "cloneRepository": "リポジトリをクローン:",
-      "installDependencies": "依存関係をインストール:",
-      "startDevServer": "開発サーバーを起動:"
+      "cloneRepository": "リポジトリをクローン：",
+      "installDependencies": "依存関係をインストール：",
+      "startDevServer": "開発サーバーを起動："
     },
     "contributeSteps": {
       "fork": "リポジトリをフォーク",
-      "createBranch": "新しいブランチを作成:",
-      "commit": "変更をコミット:",
-      "push": "ブランチにプッシュ:",
-      "pullRequest": "新しいプルリクエストを作成"
+      "createBranch": "新しいブランチを作成：",
+      "commit": "変更をコミット：",
+      "push": "ブランチへプッシュ：",
+      "pullRequest": "プルリクエストを作成"
     },
     "error": {
-      "server": "内部サーバーエラー",
-      "sorry": "申し訳ありません。サーバーで予期しない問題が発生しました。",
-      "tryAgain": "後でもう一度お試しください。",
+      "server": "サーバー内部エラー",
+      "sorry": "サーバーで予期しない問題が発生しました。申し訳ありません。",
+      "tryAgain": " 後でもう一度お試しください。",
       "returnHome": "ホームに戻る"
     }
   },
-  "Footer": {
-    "copyright": "© 2025 Next.js i18n テンプレート。MITライセンスの下でオープンソース。",
-    "githubLink": "GitHub"
-  },
   "Metadata": {
-    "title": "Next.js i18n テンプレート - 多言語スターターテンプレート",
-    "description": "Next.jsの国際化（i18n）スターターキット。アラビア語、中国語、英語、スペイン語、日本語に対応。shadcn UI、テーマ切り替え、RTLサポートを含む。",
-    "keywords": "Next.js, i18n, 国際化, アラビア語, 中国語, 英語, スペイン語, 日本語, 多言語, テンプレート, スターターテンプレート, shadcn UI, RTLサポート"
+    "title": "Tech Solutions - 多言語テクノロジーサービス",
+    "description": "クラウドホスティング、AI/ML、カスタム開発、DevOps などの専門的なテクノロジーソリューションを提供。英語・スペイン語・日本語に対応。",
+    "keywords": "クラウドホスティング, AI, 機械学習, カスタム開発, DevOps, テクノロジーソリューション, 多言語"
   }
 }

@@ -1,21 +1,21 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://next-app-i18n-starter.vercel.app";
-  const locales = ["en", "ar", "zh", "es", "ja"] as const;
+  const baseUrl = "https://halseus.com";
+  const locales = ["en", "es", "ja"] as const;
 
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: "weekly",
       priority: 1,
     },
     ...locales.map((locale) => ({
       url: `${baseUrl}/${locale}`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
     })),
   ];
 }
