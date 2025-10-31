@@ -6,9 +6,27 @@ import Link from 'next/link';
 import SplineExperience from '@/components/spline/experience';
 import FaultyTerminal from '@/components/reactbits/terminal';
 import { useTranslations } from 'next-intl';
+import { useState, useEffect } from 'react';
 
 const TrainAIModels = () => {
   const t = useTranslations("LocalAI")
+  const [terminalScale, setTerminalScale] = useState(1.5)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setTerminalScale(0.8)
+      } else if (window.innerWidth < 1024) {
+        setTerminalScale(1.2)
+      } else {
+        setTerminalScale(1.5)
+      }
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
   return (
     <section className= "w-full bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 sm:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
@@ -72,10 +90,10 @@ const TrainAIModels = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-          > 
-           <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+          >
+           <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] relative overflow-hidden">
   <FaultyTerminal
-    scale={1.5}
+    scale={terminalScale}
     gridMul={[2, 1]}
     digitSize={1.2}
     timeScale={1}
