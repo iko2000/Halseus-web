@@ -61,9 +61,15 @@ export function Header() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ${
           isScrolled
-            ? 'bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-black/5'
-            : 'bg-background/95 backdrop-blur-md border-b border-transparent'
+            ? 'bg-background/90 backdrop-blur-2xl border-b border-border/50 shadow-lg shadow-black/10'
+            : 'bg-background/85 backdrop-blur-xl border-b border-white/10'
         }`}
+        style={{
+          backgroundImage: 'url(/assets/images/header-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
@@ -84,7 +90,7 @@ export function Header() {
                 />
               </motion.div>
               <motion.span
-                className="font-bold font-pixel text-xl md:text-2xl bg-black bg-clip-text text-transparent"
+                className="font-bold font-pixel text-xl md:text-2xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
                 whileHover={{ scale: 1.02 }}
               >
                 Halseus
@@ -102,17 +108,17 @@ export function Header() {
                 >
                   <Link
                     href={item.href}
-                    className={`relative px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+                    className={`relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 ${
                       isActive(item.href)
-                        ? "text-primary"
-                        : "text-muted-foreground hover:text-primary"
+                        ? "text-white drop-shadow-[0_2px_8px_rgba(59,130,246,0.8)]"
+                        : "text-white/90 hover:text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]"
                     }`}
                   >
                     {item.label}
                     {isActive(item.href) && (
                       <motion.div
                         layoutId="activeTab"
-                        className="absolute inset-0 bg-primary/10 rounded-xl -z-10"
+                        className="absolute inset-0 bg-white/20 backdrop-blur-sm rounded-xl -z-10 shadow-lg"
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
                     )}
@@ -202,19 +208,7 @@ export function Header() {
               <div className="flex flex-col h-full">
                 {/* Mobile Menu Header */}
                 <div className="flex items-center justify-between p-6 border-b border-border">
-                  <div className="flex items-center gap-3">
-                    <div className="relative w-10 h-10">
-                      <Image
-                        src="/assets/images/halseus.png"
-                        alt="Halseus"
-                        fill
-                        className="object-contain drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]"
-                      />
-                    </div>
-                    <span className="font-bold text-lg bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                      Halseus
-                    </span>
-                  </div>
+                
                   <Button
                     variant="ghost"
                     size="icon"
