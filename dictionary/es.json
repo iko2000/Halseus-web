@@ -19,6 +19,35 @@
       "getStarted": "Comenzar"
     }
   },
+  "Automations": {
+    "badge": "Automatización de Flujos",
+    "title": "Automatizaciones de Todo Tipo",
+    "description": "Desde flujos de trabajo n8n hasta tareas programadas con node-cron, integraciones de API personalizadas y automatizaciones webhook - lo manejamos todo. Optimiza tus procesos empresariales y ahorra incontables horas con soluciones de automatización inteligente.",
+    "features": {
+      "1": "Automatización de flujos personalizados con n8n, Zapier y Make para integración perfecta de procesos",
+      "2": "Tareas programadas y trabajos cron usando node-cron, colas Bull y programadores personalizados",
+      "3": "Integraciones webhook en tiempo real, automatizaciones API y arquitecturas basadas en eventos"
+    },
+    "cta": "Automatiza tu Flujo de Trabajo",
+    "stats": {
+      "1": {
+        "value": "10K+",
+        "label": "Flujos Automatizados"
+      },
+      "2": {
+        "value": "99.9%",
+        "label": "Garantía de Tiempo Activo"
+      },
+      "3": {
+        "value": "500+",
+        "label": "Integraciones API"
+      },
+      "4": {
+        "value": "24/7",
+        "label": "Soporte de Monitoreo"
+      }
+    }
+  },
   "Services": {
     "title": "Nuestros Servicios",
     "subtitle": "Soluciones tecnológicas integrales para impulsar tu negocio. Desde infraestructura hasta insights, te tenemos cubierto.",

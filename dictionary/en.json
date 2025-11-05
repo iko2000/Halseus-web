@@ -19,6 +19,35 @@
       "getStarted": "Get Started"
     }
   },
+  "Automations": {
+    "badge": "Workflow Automation",
+    "title": "Automations of All Kinds",
+    "description": "From n8n workflows to node-cron scheduled tasks, custom API integrations, and webhook automations - we handle it all. Streamline your business processes and save countless hours with intelligent automation solutions.",
+    "features": {
+      "1": "Custom workflow automation with n8n, Zapier, and Make for seamless process integration",
+      "2": "Scheduled tasks and cron jobs using node-cron, Bull queues, and custom schedulers",
+      "3": "Real-time webhook integrations, API automations, and event-driven architectures"
+    },
+    "cta": "Automate Your Workflow",
+    "stats": {
+      "1": {
+        "value": "10K+",
+        "label": "Workflows Automated"
+      },
+      "2": {
+        "value": "99.9%",
+        "label": "Uptime Guarantee"
+      },
+      "3": {
+        "value": "500+",
+        "label": "API Integrations"
+      },
+      "4": {
+        "value": "24/7",
+        "label": "Monitoring Support"
+      }
+    }
+  },
   "Services": {
     "title": "Our Services",
     "subtitle": "Comprehensive technology solutions to power your business forward. From infrastructure to insights, we've got you covered.",

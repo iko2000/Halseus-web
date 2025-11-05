@@ -6,6 +6,7 @@ import { useEffect, useState, useMemo, useCallback, memo } from "react";
 import { useTranslations } from "next-intl";
 import FaultyTerminal from "@/components/reactbits/terminal";
 import { HomeHero } from "./homeHero";
+import { AutomationsHighlight } from "./homeAutomations";
 import { HomeScene } from "./homeScene";
 import TrainAIModels from "./homeLocalAI";
 import { ServicesList } from "./List";
@@ -47,6 +48,7 @@ export default function HomeIndex() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       <HomeHero/>
+      <AutomationsHighlight/>
       <HomeScene/>
       <div id="services">
         <ServicesList/>

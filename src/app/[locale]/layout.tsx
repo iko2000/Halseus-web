@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
-import { ThemeProvider } from "@/components/theme-provider";
 import { jsonLdScriptProps } from "react-schemaorg";
 import { WebSite } from "schema-dts";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -60,9 +59,8 @@ export default async function RootLayout({
         <link rel="icon" href="/assets/images/halseus.png" type="image/png" />
         <link rel="apple-touch-icon" href="/assets/images/halseus.png" />
 
-        {/* Theme Colors */}
-        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
-        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        {/* Theme Color */}
+        <meta name="theme-color" content="#ffffff" />
 
         {/* Preconnect for Performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -123,18 +121,11 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${myFont.variable}  ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider>
-            <Header />
-            {children}
-            <Footer />
-            </NextIntlClientProvider>
-        </ThemeProvider>
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
         <Analytics />
         <SpeedInsights />
       </body>

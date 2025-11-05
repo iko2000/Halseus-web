@@ -47,7 +47,7 @@ export function Footer() {
               <Link href="/" className="flex items-center gap-3 mb-4 group w-fit">
                 <div className="relative w-12 h-12 transition-transform group-hover:scale-110 group-hover:rotate-6 duration-300">
                   <Image
-                    src="/assets/images/halseus.png"
+                    src="/assets/images/halseus-white.png"
                     alt="Halseus"
                     fill
                     className="object-contain drop-shadow-[0_0_20px_rgba(59,130,246,0.6)] group-hover:drop-shadow-[0_0_25px_rgba(59,130,246,0.8)] transition-all duration-300"
