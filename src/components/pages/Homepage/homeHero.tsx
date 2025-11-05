@@ -30,13 +30,13 @@ export function HomeHero() {
       {/* Overlay Content Container */}
       <div className="relative z-10 w-full h-full flex items-center">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2  items-center">
             {/* Left Side - Text Content */}
-            <div className="space-y-8 text-white max-w-2xl">
+            <div className="space-y-2 text-white max-w-2xl">
               {/* Main Headline */}
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-none tracking-tight">
-                  <span className="bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-white via-blue-100 to-purple-200 font-pixel bg-clip-text text-transparent">
                     {t("title")}
                   </span>
                 </h1>
@@ -49,7 +49,7 @@ export function HomeHero() {
                 delay={150}
                 animateBy="words"
                 direction="top"
-                className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed text-gray-100"
+                className="text-xl font-pixel md:text-2xl lg:text-3xl font-light leading-relaxed text-gray-100"
               />
           
               {/* CTA Button */}

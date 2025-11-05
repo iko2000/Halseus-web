@@ -1,15 +1,14 @@
 'use client'
 
 import Link from "next/link"
+import Image from "next/image"
 import {
-  Github,
-  Twitter,
-  Linkedin,
   Mail,
   MapPin,
   Phone,
   Globe
 } from "lucide-react"
+import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa"
 import { useTranslations } from "next-intl"
 
 export function Footer() {
@@ -31,10 +30,10 @@ export function Footer() {
   }
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:info@halseus.com", label: "Email" },
+    { icon: FaGithub, href: "https://github.com/halseus", label: "GitHub" },
+    { icon: FaTwitter, href: "https://twitter.com/halseus", label: "Twitter" },
+    { icon: FaLinkedin, href: "https://linkedin.com/company/halseus", label: "LinkedIn" },
+    { icon: FaEnvelope, href: "mailto:info@halseus.com", label: "Email" },
   ]
 
   return (
@@ -45,9 +44,19 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div>
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent mb-4">
-                {t("company.name")}
-              </h3>
+              <Link href="/" className="flex items-center gap-3 mb-4 group w-fit">
+                <div className="relative w-12 h-12 transition-transform group-hover:scale-110 group-hover:rotate-6 duration-300">
+                  <Image
+                    src="/assets/images/halseus.png"
+                    alt="Halseus"
+                    fill
+                    className="object-contain drop-shadow-[0_0_20px_rgba(59,130,246,0.6)] group-hover:drop-shadow-[0_0_25px_rgba(59,130,246,0.8)] transition-all duration-300"
+                  />
+                </div>
+                <h3 className="text-2xl font-pixel font-bold bg-white bg-clip-text text-transparent group-hover:from-blue-400 group-hover:to-purple-500 transition-all duration-300">
+                  {t("company.name")}
+                </h3>
+              </Link>
               <p className="text-gray-400 leading-relaxed mb-6">
                 {t("company.description")}
               </p>
@@ -78,7 +87,7 @@ export function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
+                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-linear-to-br hover:from-blue-500/20 hover:to-purple-600/20 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20"
                     aria-label={link.label}
                   >
                     <Icon className="w-5 h-5" />
@@ -136,7 +145,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-blue-500 to-transparent opacity-50"></div>
     </footer>
   )
 }

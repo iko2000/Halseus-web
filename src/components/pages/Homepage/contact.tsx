@@ -99,7 +99,7 @@ export function ContactSection() {
   ]
 
   return (
-    <section id="contact" className="relative w-full bg-gradient-to-b from-black via-gray-900 to-black py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="contact" className="relative w-full bg-black py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -278,7 +278,7 @@ export function ContactSection() {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full md:w-auto px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 flex items-center justify-center gap-3 group disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                    className="w-full cursor-pointer md:w-auto px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 flex items-center justify-center gap-3 group disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
                     {isLoading ? 'Sending...' : t("form.submit")}
                     <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
